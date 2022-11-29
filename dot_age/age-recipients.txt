@@ -1,0 +1,8 @@
+# Name: age-nano-notouch
+age1yubikey1qf99ld3md82dnsz3wl3qyaadv9ljgc68dlwq04udqpw9e85ad2qfskhr6n3
+
+# Name: age-nfc-notouch
+age1yubikey1qg6z84mruktewfrtynntq05uu6ck8lq4j0auu30pkra2gcjun2sl54j82dc
+
+# Backup Recipient
+age1ydcph56zd4eqg8r4kvvysxkkac84n2ngg5wtmzgfkyy63nyd6ums59rlt4

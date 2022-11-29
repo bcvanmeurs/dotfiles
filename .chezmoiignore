@@ -1,0 +1,17 @@
+README.md
+ignored/
+data/
+
+.oh-my-zsh/cache/**
+.oh-my-zsh/custom/themes/powerlevel10k/**/*.zwc
+
+# Work keys
+{{- if ne .chezmoi.hostname "SHPLC-T4VS" }}
+.ssh/id_sh
+.ssh/id_sh_rsa
+.ssh/id_sh.pub
+.ssh/id_sh_rsa.pub
+{{- end }}
+
+# TODO: implement when working with remotes
+.ssh/authorized_keys

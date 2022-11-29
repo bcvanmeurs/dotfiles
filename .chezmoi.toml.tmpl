@@ -1,0 +1,10 @@
+{{- $email := promptStringOnce . "email" "Email address" -}}
+
+[data]
+    email = {{ $email | quote }}
+    github = "bcvanmeurs"
+
+encryption = "age"
+[age]
+    identity = "~/.age/age-identities.txt"
+    recipientsFile = "~/.age/age-recipients.txt"

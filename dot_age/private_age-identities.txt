@@ -1,0 +1,7 @@
+#         Name: age-nano-notouch
+#    Recipient: age1yubikey1qf99ld3md82dnsz3wl3qyaadv9ljgc68dlwq04udqpw9e85ad2qfskhr6n3
+AGE-PLUGIN-YUBIKEY-15DJ4GQVRFHS3J7QFFCRYV
+
+#         Name: age-nfc-notouch
+#    Recipient: age1yubikey1qg6z84mruktewfrtynntq05uu6ck8lq4j0auu30pkra2gcjun2sl54j82dc
+AGE-PLUGIN-YUBIKEY-102ARKQVRCHQZKHGLDJSLT
