@@ -15,6 +15,7 @@ sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply bcvanmeurs
 
 - Brew install
 - Headless install on linux
+- Encryption dependencies
 - Install dependencies
 - Inspiration:
   - [felipecrs/dotfiles](https://github.com/felipecrs/dotfiles)
