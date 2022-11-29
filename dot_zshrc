@@ -92,7 +92,12 @@ plugins=(
 	vagrant
 	vscode
 	tmux
+	zsh-syntax-highlighting
+	zsh-autosuggestions
 	)
+
+# https://github.com/zsh-users/zsh-completions/issues/603
+fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 
 source $ZSH/oh-my-zsh.sh
 
