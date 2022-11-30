@@ -1,0 +1,111 @@
+tap "buo/cask-upgrade"
+tap "cantino/mcfly"
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/cask-drivers"
+tap "homebrew/cask-fonts"
+tap "homebrew/cask-versions"
+tap "homebrew/core"
+tap "homebrew/services"
+
+## Essentials
+brew "age", args: ["HEAD"]
+brew "age-plugin-yubikey"
+brew "brew-cask-completion"
+brew "chezmoi"
+brew "git"
+brew "gnupg"
+brew "gopass"
+brew "mas"
+brew "openssh"
+brew "pinentry-mac"
+brew "pre-commit"
+brew "cantino/mcfly/mcfly"
+brew "tmux"
+brew "tree"
+brew "watch"
+brew "wget"
+
+cask "1password"
+cask "1password-cli"
+cask "alfred"
+cask "chrysalis"
+cask "dozer"
+cask "font-meslo-lg-nerd-font"
+cask "font-source-code-pro"
+cask "iterm2"
+cask "kitty"
+brew "imagemagick"
+
+## Tools
+brew "gh"
+brew "go"
+brew "jq"
+brew "pipx"
+brew "pyenv"
+brew "pyenv-virtualenv"
+brew "skopeo"
+brew "sops"
+brew "ykman"
+
+## Dependencies
+brew "readline"
+brew "xz"
+brew "openssl@3"
+
+## Casks
+cask "beekeeper-studio"
+cask "cloudflare-warp"
+cask "db-browser-for-sqlite"
+cask "docker"
+cask "lepton"
+cask "logseq"
+cask "notion"
+cask "obsidian"
+cask "raindropio"
+cask "rectangle"
+cask "signal"
+cask "visual-studio-code"
+cask "whatsapp"
+
+mas "Keynote", id: 409183694
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
+mas "Spark", id: 1176895641
+mas "WireGuard", id: 1451685025
+mas "Yubico Authenticator", id: 1497506650
+
+{{- if eq .hostname "SHPLC-T4VS" }}
+
+### HOST SHPLC-T4VS ###
+tap "microsoft/mssql-release"
+brew "argocd"
+brew "azure-cli"
+brew "circleci"
+brew "cookiecutter"
+brew "helm"
+brew "k3d"
+brew "k9s"
+brew "kind"
+brew "kubernetes-cli"
+brew "kubectx"
+brew "kustomize"
+brew "minikube"
+brew "terraform"
+brew "terraform-docs"
+brew "microsoft/mssql-release/msodbcsql18"
+brew "microsoft/mssql-release/mssql-tools18"
+
+cask "azure-data-studio"
+cask "keybase"
+cask "microsoft-auto-update"
+cask "microsoft-azure-storage-explorer"
+cask "microsoft-edge"
+cask "microsoft-teams"
+cask "pgadmin4"
+
+mas "Azure VPN Client", id: 1553936137
+mas "Microsoft To Do", id: 1274495053
+mas "Slack", id: 803453959
+### END ###
+{{- end  }}

@@ -13,7 +13,6 @@ sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply bcvanmeurs
 
 ## Todo
 
-- Brew install
 - Headless install on linux
 - Encryption dependencies
 - Install dependencies

@@ -1,0 +1,8 @@
+{{- if eq .chezmoi.os "darwin" -}}
+#!/bin/bash
+# Brewfile hash: {{ include "Brewfile.tmpl" | sha256sum }}
+
+brew bundle install --file=Brewfile
+brew bundle cleanup --file=Brewfile
+
+{{ end -}}

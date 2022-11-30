@@ -3,6 +3,7 @@
 [data]
     email = {{ $email | quote }}
     github = "bcvanmeurs"
+    hostname = "{{ output "scutil" "--get" "ComputerName" | trim }}"
 
 encryption = "age"
 [age]
