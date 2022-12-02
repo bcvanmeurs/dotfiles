@@ -2,7 +2,11 @@
 #!/bin/bash
 # Brewfile hash: {{ include "Brewfile.tmpl" | sha256sum }}
 
-brew bundle install --file=Brewfile
-brew bundle cleanup --file=Brewfile
+brew bundle install --file=/dev/stdin <<EOF
+{{ includeTemplate "Brewfile.tmpl" . }}
+EOF
 
+brew bundle cleanup --file=/dev/stdin <<EOF
+{{ includeTemplate "Brewfile.tmpl" . }}
+EOF
 {{ end -}}
