@@ -1,0 +1,69 @@
+{
+    "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry": false,
+    "python.formatting.provider": "black",
+    "workbench.iconTheme": "vscode-icons",
+
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs":"active",
+
+    "python.languageServer": "Pylance",
+    "terminal.integrated.scrollback": 10000,
+    "git-graph.maxDepthOfRepoSearch": 3,
+    
+    "git.autofetch": true,
+    "terminal.external.osxExec": "iTerm.app",
+    "terminal.integrated.fontFamily": "MesloLGS NF",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
+    "azure.resourceFilter": [
+        "f484e27f-5c61-4a6e-9125-ce64249726ae/9f96a825-c744-4279-bab6-15c10afe8e53"
+    ],
+    "jupyter.askForKernelRestart": false,
+    "redhat.telemetry.enabled": false,
+    "security.workspace.trust.untrustedFiles": "open",
+    "terminal.integrated.tabs.location": "left",
+    "go.toolsManagement.autoUpdate": true,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "gitProjectManager.baseProjectsFolders": [
+            "/Users/bram/repos",
+        ],
+    "workbench.colorTheme": "One Dark Pro Monokai Darker",
+    "python.terminal.activateEnvironment": false,
+    "githubPullRequests.fileListLayout": "flat",
+    "azureFunctions.showProjectWarning": false,
+    "eslint.workingDirectories": [{ "mode": "auto" }],
+    "[markdown]": { 
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
+    },
+    "[python]": { 
+        "editor.formatOnSave": true
+    },
+    "python.formatting.blackPath": "/Users/bram/.local/bin/black",
+    "cSpell.enabledLanguageIds": [
+        "markdown"
+    ],
+    "projectManager.git.baseFolders": [
+        "~/repos/"
+    ],
+    "projectManager.sortList": "Name",
+    "liveServer.settings.donotShowInfoMsg": true,
+    "projectManager.any.baseFolders": [
+        "~/repos/"
+    ],
+    "gopls": {
+        "buildFlags": ["-tags=initialise","-tags=integration"]
+    },
+    "settingsSync.ignoredExtensions": [
+        "tootone.org-mode"
+    ],
+    "terminal.integrated.enableMultiLinePasteWarning": false,
+    "githubPullRequests.pullBranch": "never",
+    "terminal.integrated.shellIntegration.enabled": false,
+    "python.analysis.typeCheckingMode": "basic",
+    "projectManager.any.maxDepthRecursion": 1
+}

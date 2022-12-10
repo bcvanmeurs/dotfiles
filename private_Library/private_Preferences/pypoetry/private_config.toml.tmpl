@@ -1,0 +1,12 @@
+[virtualenvs]
+create = false
+
+{{- if eq .hostname "SHPLC-T4VS" }}
+
+[repositories]
+[repositories.sensynehealth]
+url = "https://pypi.fury.io/sensynehealth/"
+
+[repositories.devpi]
+url = "http://localhost:4040/root/pypi/stable/"
+{{ end -}}

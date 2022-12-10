@@ -16,3 +16,6 @@ data/
 
 # TODO: implement when working with remotes
 .ssh/authorized_keys
+
+## vscode settings https://www.chezmoi.io/user-guide/manage-different-types-of-file/#handle-configuration-files-which-are-externally-modified
+vscode_settings.json
