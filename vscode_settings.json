@@ -31,7 +31,6 @@
     "gitProjectManager.baseProjectsFolders": [
             "/Users/bram/repos",
         ],
-    "workbench.colorTheme": "One Dark Pro Monokai Darker",
     "python.terminal.activateEnvironment": false,
     "githubPullRequests.fileListLayout": "flat",
     "azureFunctions.showProjectWarning": false,
@@ -65,5 +64,11 @@
     "githubPullRequests.pullBranch": "never",
     "terminal.integrated.shellIntegration.enabled": false,
     "python.analysis.typeCheckingMode": "basic",
-    "projectManager.any.maxDepthRecursion": 1
+    "projectManager.any.maxDepthRecursion": 1,
+    "window.autoDetectColorScheme": true,
+    "workbench.colorTheme": "Hop Light",
+    "workbench.preferredLightColorTheme": "Hop Light",
+    "workbench.preferredDarkColorTheme": "One Dark Pro Monokai Darker",
+    "explorer.confirmDelete": false,
+    "editor.minimap.enabled": false
 }

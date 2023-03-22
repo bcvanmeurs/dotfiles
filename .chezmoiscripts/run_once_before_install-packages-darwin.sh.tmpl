@@ -2,7 +2,7 @@
 #!/bin/bash
 # Brewfile hash: {{ include "Brewfile.tmpl" | sha256sum }}
 
-brew bundle install --file=/dev/stdin <<EOF
+brew bundle install --no-upgrade --file=/dev/stdin <<EOF
 {{ includeTemplate "Brewfile.tmpl" . }}
 EOF
 
