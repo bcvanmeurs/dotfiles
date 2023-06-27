@@ -1,5 +1,6 @@
 ### Personal ###
 scratchpad.*
+pyrightconfig.json
 
 # Editors
 .idea

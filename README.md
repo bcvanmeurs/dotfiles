@@ -24,7 +24,18 @@ sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply bcvanmeurs
     - [aliases](https://github.com/batistein/dotfiles/blob/master/dot_zsh/alias.zsh)
   - [twpayne/dotfiles](https://github.com/twpayne/dotfiles)
 
+## Brew
+
+Brew runs automated when the brewfile has changed. To manually run use:
+
+- `brew bundle install --no-upgrade`
+- `brew bundle cleanup`
+- `brew cu`
+- `brew cu -a -i` for interactive mode on auto updatable programs
+
 ## Encryption
+
+### Encryption with age
 
 1. Follow this to create a key pair: https://www.chezmoi.io/user-guide/frequently-asked-questions/encryption/
 2. Encrypt a yaml file in some place (in my example it is in data).
@@ -33,6 +44,12 @@ sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply bcvanmeurs
    {{- $work := include "data/work.yaml.age" | decrypt | fromYaml -}}
    export PIP_EXTRA_INDEX_URL={{ $work.pip_extra_index_url }}
    ```
+
+### Encryption with 1Password
+
+```
+{{ onepasswordRead "op://development/id_sk_nano/id_sk_nano.pub" }}
+```
 
 ## Cheatsheet
 
@@ -55,7 +72,7 @@ sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply bcvanmeurs
 
 ### Working with scripts
 
-- `chezmoi state delete-bucket --bucket=scriptState` to clear the state of run*once* scripts.
+- `chezmoi state delete-bucket --bucket=scriptState` to clear the state of run _once_ scripts.
 
 ### Daily commands
 
