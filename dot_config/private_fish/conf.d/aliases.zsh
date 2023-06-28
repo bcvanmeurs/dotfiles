@@ -1,22 +1,5 @@
-alias cls=clear
-alias azal="az account list -o table"
-alias azas="az account set --subscription "
-alias kx="kubectx"
-alias kn="kubens"
-alias g-='git checkout -'
-# alias k="kubectl"
-alias tp="terraform plan -out tfplan"
-alias ta="terraform apply"
-alias kcurl="kubectl run --rm curl --image=radial/busyboxplus:curl -i --tty"
-alias kdeb="kubectl run --rm debian --image=debian:latest -i --tty"
-alias kev="k get ev --sort-by='.lastTimestamp'"
-alias kevw="k get ev --sort-by='.lastTimestamp' --field-selector type=Warning"
-alias dc=docker-compose
+## Functions to convert to fish
 
-alias ghprv="gh pr view -w"
-function ghb() {
-  gh browse --branch $(git branch --show-current)
-}
 
 function dockerrmi() {
   docker rmi $(docker images -f 'dangling=true' -q)
@@ -59,7 +42,3 @@ sign () {
         output="${1}".$(date +%y%m%d).sign
         gpg --armor --output ${output} --clearsign ${1}  && echo "${1} -> ${output}"
 }
-
-## Chezmoi
-alias dotfiles="cd ~/.local/share/chezmoi"
-alias dotconfig="cd ~/.config/chezmoi"

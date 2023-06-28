@@ -1,0 +1,6 @@
+{{- $work := include "data/work.yaml.age" | decrypt | fromYaml -}}
+
+# External package registry
+# This allows pip to pull packages from a custom package registry:
+set -gx PIP_EXTRA_INDEX_URL {{ $work.pip_extra_index_url }}
+set -gx GEMFURY_DOWNLOAD_KEY {{ $work.gemfury_download_key }}
