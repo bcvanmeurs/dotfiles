@@ -1,5 +1,6 @@
 ## System
 alias cls="clear"
+alias vim="nvim"
 
 ## Azure
 alias azal="az account list -o table"
@@ -29,4 +30,3 @@ alias kevw="k get ev --sort-by='.lastTimestamp' --field-selector type=Warning"
 ## Terraform
 alias tp="terraform plan -out tfplan"
 alias ta="terraform apply"
-

@@ -26,4 +26,3 @@ set -gx MCFLY_RESULTS 40
 
 ## rustup
 fish_add_path $HOME/.cargo/bin
-

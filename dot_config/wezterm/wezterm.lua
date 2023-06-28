@@ -12,9 +12,8 @@ end
 
 -- This is where you actually apply your config choices
 config.window_decorations = "RESIZE"
-config.font = wezterm.font 'FiraCode Nerd Font Mono'
+config.font = wezterm.font 'FiraCode Nerd Font'
 config.font_size = 14
 
 -- and finally, return the configuration to wezterm
 return config
-
