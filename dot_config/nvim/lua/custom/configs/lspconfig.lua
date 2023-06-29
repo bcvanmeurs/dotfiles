@@ -9,3 +9,9 @@ lspconfig.rust_analyzer.setup({
 	filetypes = { "rust" },
 	root_dir = lspconfig.util.root_pattern("Cargo.toml"),
 })
+
+lspconfig.pyright.setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
+	filetypes = { "python" },
+})

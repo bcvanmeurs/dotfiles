@@ -56,6 +56,13 @@ M.mason = {
 		"lua-language-server",
 		"stylua",
 
+		-- python
+		"pyright",
+		"black",
+		"mypy",
+		"ruff",
+		"debugpy",
+
 		-- rust
 		"rust-analyzer",
 
