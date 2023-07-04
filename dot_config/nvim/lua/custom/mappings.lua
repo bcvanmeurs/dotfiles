@@ -1,8 +1,8 @@
 local M = {}
 
 M.custom = {
-	-- add to default key map, because the NVChad default is only loaded with the lsp
 	n = {
+		-- add to default key map, because the NVChad default is only loaded with the lsp
 		["<leader>fm"] = {
 			function()
 				vim.lsp.buf.format({ async = true })
@@ -10,12 +10,14 @@ M.custom = {
 			"LSP formatting",
 		},
 	},
+
+	-- ["gs"] = { "<Plug>(leap-from-window)" },
 }
 
 M.dap = {
 	plugin = true,
 	n = {
-		["<leader>db"] = { "<cmd> DapToggleBreakpoint <CR>" },
+		["<leader>db"] = { "<cmd> DapToggleBreakpoint <CR>", "Set Breakpoint" },
 	},
 }
 
@@ -26,6 +28,7 @@ M.dap_python = {
 			function()
 				require("dap-python").test_method()
 			end,
+			"Start current test method",
 		},
 	},
 }

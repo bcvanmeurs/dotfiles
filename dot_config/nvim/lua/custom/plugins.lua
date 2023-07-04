@@ -19,6 +19,14 @@ local plugins = {
 	{ "nvim-tree/nvim-tree.lua", opts = overrides.nvimtree },
 	{ "nvim-treesitter/nvim-treesitter", opts = overrides.treesitter },
 	{ "williamboman/mason.nvim", opts = overrides.mason },
+	{ "tpope/vim-fugitive", lazy = false },
+	{
+		"ggandor/leap.nvim",
+		config = function()
+			require("leap").add_default_mappings()
+		end,
+		lazy = false,
+	},
 	{
 		"mfussenegger/nvim-dap",
 		config = function()
@@ -50,12 +58,12 @@ local plugins = {
 			dap.listeners.after.event_initialized["dapui_config"] = function()
 				dapui.open()
 			end
-			dap.listeners.before.event_terminated["dapui_config"] = function()
-				dapui.close()
-			end
-			dap.listeners.before.event_exited["dapui_config"] = function()
-				dapui.close()
-			end
+			-- dap.listeners.before.event_terminated["dapui_config"] = function()
+			-- 	dapui.close()
+			-- end
+			-- dap.listeners.before.event_exited["dapui_config"] = function()
+			-- 	dapui.close()
+			-- end
 		end,
 	},
 }

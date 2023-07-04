@@ -1,6 +1,7 @@
 ### Personal ###
 scratchpad.*
 pyrightconfig.json
+ruff.toml
 
 # Editors
 .idea
