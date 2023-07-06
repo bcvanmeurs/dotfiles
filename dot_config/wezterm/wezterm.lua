@@ -15,5 +15,7 @@ config.window_decorations = "RESIZE"
 config.font = wezterm.font("FiraCode Nerd Font")
 config.font_size = 14
 
+config.default_prog = { "/usr/local/bin/nu" }
+
 -- and finally, return the configuration to wezterm
 return config
