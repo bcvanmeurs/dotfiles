@@ -1,12 +1,17 @@
+## lazygit
+set -gx XDG_CONFIG_HOME "$HOME/.config"
+
 # Homebrew
-fish_add_path /usr/local/sbin
+set -gx HOMEBREW_PREFIX "/usr/local";
+set -gx HOMEBREW_CELLAR "/usr/local/Cellar";
+set -gx HOMEBREW_REPOSITORY "/usr/local/Homebrew";
+set -q PATH; or set PATH ''; set -gx PATH "/usr/local/bin" "/usr/local/sbin" $PATH;
+set -q MANPATH; or set MANPATH ''; set -gx MANPATH "/usr/local/share/man" $MANPATH;
+set -q INFOPATH; or set INFOPATH ''; set -gx INFOPATH "/usr/local/share/info" $INFOPATH;
 
 # Pyenv
 set -gx PYENV_ROOT $HOME/.pyenv
 set -gx PATH $PYENV_ROOT/bin $PATH
-
-pyenv init - | source
-pyenv virtualenv-init - | source
 
 # Pipx / Poetry
 fish_add_path $HOME/.local/bin
@@ -26,3 +31,6 @@ set -gx MCFLY_RESULTS 40
 
 ## rustup
 fish_add_path $HOME/.cargo/bin
+
+## fzf
+set -gx FZF_DEFAULT_OPTS "--ansi"

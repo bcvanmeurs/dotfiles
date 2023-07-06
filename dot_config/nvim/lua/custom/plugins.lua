@@ -19,6 +19,7 @@ local plugins = {
 	{ "nvim-tree/nvim-tree.lua", opts = overrides.nvimtree },
 	{ "nvim-treesitter/nvim-treesitter", opts = overrides.treesitter },
 	{ "williamboman/mason.nvim", opts = overrides.mason },
+	{ "NvChad/nvterm", opts = overrides.nvterm },
 	{ "tpope/vim-fugitive", lazy = false },
 	{
 		"ggandor/leap.nvim",

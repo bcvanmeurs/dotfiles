@@ -1,0 +1,11 @@
+git:
+  autoFetch: false
+  autoRefresh: false
+  paging:
+    colorArg: always
+    pager: delta --dark --paging=never
+gui:
+  nerdFontsVersion: "3"
+notARepository: "skip"
+os:
+  editPreset: "nvim"

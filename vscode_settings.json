@@ -1,38 +1,4 @@
 {
-  "telemetry.enableCrashReporter": false,
-  "telemetry.enableTelemetry": false,
-  "python.formatting.provider": "black",
-  "workbench.iconTheme": "vscode-icons",
-
-  "editor.bracketPairColorization.enabled": true,
-  "editor.guides.bracketPairs": "active",
-
-  "python.languageServer": "Pylance",
-  "terminal.integrated.scrollback": 10000,
-  "git-graph.maxDepthOfRepoSearch": 3,
-
-  "git.autofetch": true,
-  "terminal.external.osxExec": "iTerm.app",
-  "terminal.integrated.fontFamily": "MesloLGS NF",
-  "editor.suggestSelection": "first",
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "workbench.editorAssociations": {
-    "*.ipynb": "jupyter-notebook"
-  },
-  "azure.resourceFilter": [
-    "f484e27f-5c61-4a6e-9125-ce64249726ae/9f96a825-c744-4279-bab6-15c10afe8e53"
-  ],
-  "jupyter.askForKernelRestart": false,
-  "redhat.telemetry.enabled": false,
-  "security.workspace.trust.untrustedFiles": "open",
-  "terminal.integrated.tabs.location": "left",
-  "go.toolsManagement.autoUpdate": true,
-  "diffEditor.ignoreTrimWhitespace": false,
-  "gitProjectManager.baseProjectsFolders": ["/Users/bram/repos"],
-  "python.terminal.activateEnvironment": false,
-  "githubPullRequests.fileListLayout": "flat",
-  "azureFunctions.showProjectWarning": false,
-  "eslint.workingDirectories": [{ "mode": "auto" }],
   "[markdown]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
@@ -40,25 +6,74 @@
   "[python]": {
     "editor.formatOnSave": true
   },
-  "python.formatting.blackPath": "/Users/bram/.local/bin/black",
-  "cSpell.enabledLanguageIds": ["markdown"],
-  "projectManager.git.baseFolders": ["~/repos/"],
-  "projectManager.sortList": "Name",
-  "liveServer.settings.donotShowInfoMsg": true,
-  "projectManager.any.baseFolders": ["~/repos/"],
-  "gopls": {
-    "buildFlags": ["-tags=initialise", "-tags=integration"]
-  },
-  "settingsSync.ignoredExtensions": ["tootone.org-mode"],
-  "terminal.integrated.enableMultiLinePasteWarning": false,
+  "azure.resourceFilter": [
+    "f484e27f-5c61-4a6e-9125-ce64249726ae/9f96a825-c744-4279-bab6-15c10afe8e53"
+  ],
+  "azureFunctions.showProjectWarning": false,
+  "cSpell.enabledLanguageIds": [
+    "markdown"
+  ],
+  "diffEditor.ignoreTrimWhitespace": false,
+  "editor.accessibilitySupport": "off",
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": "active",
+  "editor.minimap.enabled": false,
+  "editor.suggestSelection": "first",
+  "eslint.workingDirectories": [
+    {
+      "mode": "auto"
+    }
+  ],
+  "explorer.confirmDelete": false,
+  "git-graph.maxDepthOfRepoSearch": 3,
+  "git.autofetch": true,
+  "gitProjectManager.baseProjectsFolders": [
+    "/Users/bram/repos"
+  ],
+  "githubPullRequests.fileListLayout": "flat",
   "githubPullRequests.pullBranch": "never",
-  "terminal.integrated.shellIntegration.enabled": false,
-  "python.analysis.typeCheckingMode": "basic",
+  "go.toolsManagement.autoUpdate": true,
+  "gopls": {
+    "buildFlags": [
+      "-tags=initialise",
+      "-tags=integration"
+    ]
+  },
+  "jupyter.askForKernelRestart": false,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "projectManager.any.baseFolders": [
+    "~/repos/"
+  ],
   "projectManager.any.maxDepthRecursion": 1,
+  "projectManager.git.baseFolders": [
+    "~/repos/"
+  ],
+  "projectManager.sortList": "Name",
+  "python.analysis.typeCheckingMode": "basic",
+  "python.formatting.blackPath": "/Users/bram/.local/bin/black",
+  "python.formatting.provider": "black",
+  "python.languageServer": "Pylance",
+  "python.terminal.activateEnvironment": false,
+  "redhat.telemetry.enabled": false,
+  "security.workspace.trust.untrustedFiles": "open",
+  "settingsSync.ignoredExtensions": [
+    "tootone.org-mode"
+  ],
+  "telemetry.enableCrashReporter": false,
+  "telemetry.enableTelemetry": false,
+  "terminal.external.osxExec": "iTerm.app",
+  "terminal.integrated.enableMultiLinePasteWarning": false,
+  "terminal.integrated.fontFamily": "MesloLGS NF",
+  "terminal.integrated.scrollback": 10000,
+  "terminal.integrated.shellIntegration.enabled": false,
+  "terminal.integrated.tabs.location": "left",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "window.autoDetectColorScheme": true,
   "workbench.colorTheme": "Hop Light",
-  "workbench.preferredLightColorTheme": "Hop Light",
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter-notebook"
+  },
+  "workbench.iconTheme": "vscode-icons",
   "workbench.preferredDarkColorTheme": "One Dark Pro Monokai Darker",
-  "explorer.confirmDelete": false,
-  "editor.minimap.enabled": false
+  "workbench.preferredLightColorTheme": "Hop Light"
 }

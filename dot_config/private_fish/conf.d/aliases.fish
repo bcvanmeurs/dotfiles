@@ -2,6 +2,17 @@
 alias cls="clear"
 alias vim="nvim"
 
+## Repos
+alias rep="cd (fd -d 1 -t directory -c always . ~/repos/ | fzf --ansi )"
+alias rev="vim (fd -d 1 -t directory -c always . ~/repos/ | fzf --ansi )"
+alias lg="lazygit"
+
+## exa
+set -gx EXA_GRID_ROWS 7
+alias ls="COLUMNS=80 exa --icons"
+alias ll="exa --long --header --grid --git --no-permissions --no-user --icons"
+alias lt="ll -T --git-ignore"
+
 ## Azure
 alias azal="az account list -o table"
 alias azas="az account set --subscription"

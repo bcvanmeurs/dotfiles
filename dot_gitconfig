@@ -2,12 +2,30 @@
 	email = 7422223+bcvanmeurs@users.noreply.github.com
 	name = Bram van Meurs
 	signingkey = 0x7DFB3B93C5B98C91
+
 [core]
 	excludesFile = ~/.gitignore
+  pager = delta
+
 [init]
 	defaultBranch = main
+
 [push]
 	default = current
 	autoSetupRemote = true
+
 [commit]
 	gpgsign = true
+
+[interactive]
+  diffFilter = delta --color-only
+
+[delta]
+    navigate = true    # use n and N to move between diff sections
+    # side-by-side = true
+
+[merge]
+    conflictstyle = diff3
+
+[diff]
+    colorMoved = default
