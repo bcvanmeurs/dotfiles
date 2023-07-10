@@ -19,3 +19,4 @@ data/
 
 ## vscode settings https://www.chezmoi.io/user-guide/manage-different-types-of-file/#handle-configuration-files-which-are-externally-modified
 vscode_settings.json
+.config/nvim/_lazy-lock.json
