@@ -1,3 +1,6 @@
+## Colemak
+set -gx COLEMAK true
+
 ## lazygit
 set -gx XDG_CONFIG_HOME "$HOME/.config"
 

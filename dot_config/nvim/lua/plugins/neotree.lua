@@ -4,10 +4,8 @@ return {
     opts = {
       window = {
         mappings = {
-          ["e"] = "",
           ["a"] = {
             "add",
-            -- some commands may take optional config options, see `:h neo-tree-mappings` for details
             config = {
               show_path = "relative", -- "none", "relative", "absolute"
             },
@@ -24,8 +22,6 @@ return {
               show_path = "relative", -- "none", "relative", "absolute"
             },
           },
-          ["Z"] = "expand_all_nodes",
-          ["E"] = "toggle_auto_expand_width",
         },
       },
     },
