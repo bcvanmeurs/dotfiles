@@ -12,8 +12,17 @@ end
 
 -- This is where you actually apply your config choices
 config.window_decorations = "RESIZE"
+config.hide_tab_bar_if_only_one_tab = true
 config.font = wezterm.font("FiraCode Nerd Font")
 config.font_size = 14
+config.color_scheme = "Tokyo Night Moon"
+
+config.window_padding = {
+  left = "1cell",
+  right = "1cell",
+  top = "0.5cell",
+  bottom = 0,
+}
 
 -- and finally, return the configuration to wezterm
 return config

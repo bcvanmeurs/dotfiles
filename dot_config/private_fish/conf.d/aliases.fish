@@ -2,9 +2,12 @@
 alias cls="clear"
 alias vim="nvim"
 
+alias v="fd --type file --hidden --exclude .git | fzf-tmux -p --reverse | xargs nvim"
+alias d="fd --type file --hidden --exclude .git . ~/.local/share/chezmoi | fzf-tmux -p --reverse | xargs nvim"
+
 ## Repos
-alias rep="cd (fd -d 1 -t directory -c always . ~/repos/ | fzf --ansi )"
-alias rev="vim (fd -d 1 -t directory -c always . ~/repos/ | fzf --ansi )"
+alias rep="fd -d 1 -t directory -c always . ~/repos/ | fzf --ansi | xargs cd"
+alias rev="fd -d 1 -t directory -c always . ~/repos/ | fzf --ansi | xargs vim"
 alias lg="lazygit"
 
 ## exa
