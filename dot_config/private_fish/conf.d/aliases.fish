@@ -6,15 +6,17 @@ alias v="fd --type file --hidden --exclude .git | fzf-tmux -p --reverse | xargs 
 alias d="fd --type file --hidden --exclude .git . ~/.local/share/chezmoi | fzf-tmux -p --reverse | xargs nvim"
 
 ## Repos
-alias rep="fd -d 1 -t directory -c always . ~/repos/ | fzf --ansi | xargs cd"
-alias rev="fd -d 1 -t directory -c always . ~/repos/ | fzf --ansi | xargs vim"
+alias rep="cd ( fd -d 1 -t directory -c always . ~/repos/ | fzf --ansi )"
+alias rev="nvim ( fd -d 1 -t directory -c always . ~/repos/ | fzf --ansi )"
 alias lg="lazygit"
 
 ## exa
-set -gx EXA_GRID_ROWS 7
+set -gx EXA_GRID_ROWS 10
 alias ls="COLUMNS=80 exa --icons"
 alias ll="exa --long --header --grid --git --no-permissions --no-user --icons"
-alias lt="ll -T --git-ignore"
+alias tree="ll -T --git-ignore"
+alias la="ls -a"
+alias lla="ll -a"
 
 ## Azure
 alias azal="az account list -o table"

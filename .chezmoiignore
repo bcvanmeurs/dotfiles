@@ -2,9 +2,6 @@ README.md
 ignored/
 data/
 
-.oh-my-zsh/cache/**
-.oh-my-zsh/custom/themes/powerlevel10k/**/*.zwc
-
 {{- if ne .hostname "SHPLC-T4VS" }}
 
 # Work keys
@@ -20,3 +17,4 @@ data/
 ## vscode settings https://www.chezmoi.io/user-guide/manage-different-types-of-file/#handle-configuration-files-which-are-externally-modified
 vscode_settings.json
 .config/nvim/_lazy-lock.json
+.config/vimium/
