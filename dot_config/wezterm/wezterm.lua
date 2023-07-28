@@ -24,5 +24,8 @@ config.window_padding = {
   bottom = 0,
 }
 
+-- Spawn a fish shell in login mode
+config.default_prog = { '/opt/homebrew/bin/tmux' }
+
 -- and finally, return the configuration to wezterm
 return config

@@ -3,8 +3,26 @@
 ## Quickstart
 
 ```bash
-sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply bcvanmeurs
+sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply git@github.com:bcvanmeurs/dotfiles.git
 ```
+
+### Fish shell
+
+Add the fish shell to /etc/shells with:
+
+```bash
+echo $(which fish) | sudo tee -a /etc/shells
+```
+
+Change your default shell with:
+
+```bash
+chsh -s $(which fish)
+```
+
+### Tmux
+
+In tmux run `prefix + I` to install [tpm](https://github.com/tmux-plugins/tpm) packages.
 
 ## Choices made
 

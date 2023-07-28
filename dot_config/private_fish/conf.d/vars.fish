@@ -5,12 +5,7 @@ set -gx COLEMAK true
 set -gx XDG_CONFIG_HOME "$HOME/.config"
 
 # Homebrew
-set -gx HOMEBREW_PREFIX "/usr/local";
-set -gx HOMEBREW_CELLAR "/usr/local/Cellar";
-set -gx HOMEBREW_REPOSITORY "/usr/local/Homebrew";
-set -q PATH; or set PATH ''; set -gx PATH "/usr/local/bin" "/usr/local/sbin" $PATH;
-set -q MANPATH; or set MANPATH ''; set -gx MANPATH "/usr/local/share/man" $MANPATH;
-set -q INFOPATH; or set INFOPATH ''; set -gx INFOPATH "/usr/local/share/info" $INFOPATH;
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Pyenv
 set -gx PYENV_ROOT $HOME/.pyenv
