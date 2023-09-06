@@ -2,7 +2,6 @@ tap "buo/cask-upgrade"
 tap "cantino/mcfly"
 tap "homebrew/bundle"
 tap "homebrew/cask"
-tap "homebrew/cask-drivers"
 tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
@@ -42,13 +41,8 @@ brew "zoxide"
 brew "koekeishiya/formulae/skhd"
 brew "koekeishiya/formulae/yabai"
 
-cask "1password"
 cask "1password-cli"
-cask "alfred"
-cask "chrysalis"
-cask "dozer"
 cask "font-fira-code-nerd-font"
-cask "iterm2"
 cask "monitorcontrol"
 cask "wezterm"
 
@@ -78,13 +72,22 @@ brew "zlib"
 brew "tcl-tk"
 
 ## Casks
-cask "cloudflare-warp"
 cask "docker"
+cask "obsidian"
+cask "raindropio"
+
+{{- if eq .hostname "Brams-MacBook-Air" }}
+## Casks
+cask "1password"
+cask "alfred"
+cask "chrysalis"
+cask "dozer"
+cask "iterm2"
+
+cask "cloudflare-warp"
 cask "lepton"
 cask "logseq"
 cask "notion"
-cask "obsidian"
-cask "raindropio"
 cask "rectangle"
 cask "signal"
 cask "visual-studio-code"
@@ -95,6 +98,7 @@ mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "WireGuard", id: 1451685025
 mas "Yubico Authenticator", id: 1497506650
+{{- end  }}
 
 {{- if eq .hostname "SHPLC-T4VS" }}
 

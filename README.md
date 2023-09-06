@@ -2,8 +2,29 @@
 
 ## Quickstart
 
+Install brew
+
 ```bash
-sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply git@github.com:bcvanmeurs/dotfiles.git
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+```bash
+sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply bcvanmeurs
+```
+
+After installation set remote to be through SSH
+
+```bash
+git remote set-url origin git@github.com:bcvanmeurs/dotfiles.git
+```
+
+import GPG key
+
+```bash
+gpg --import ~/.gnupg/gpg-github-0x7DFB3B93C5B98C91-2022-11-23.asc
+gpg --edit-key 0x7DFB3B93C5B98C91
+trust
+quit
 ```
 
 ### Fish shell
