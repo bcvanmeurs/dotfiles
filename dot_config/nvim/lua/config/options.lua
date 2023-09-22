@@ -14,5 +14,5 @@ opt.iskeyword:append("-") -- consider string-string as whole word
 
 -- Python settings. Important for fast opening of python files,
 -- otherwise there is a delay of 3 seconds
--- vim.g.loaded_python3_provider = 0 -- disable python provider
-vim.g.python3_host_prog = "~/.pyenv/versions/neovim/bin/python"
+vim.g.loaded_python3_provider = 0 -- disable python provider
+-- vim.g.python3_host_prog = "~/.pyenv/versions/neovim/bin/python"

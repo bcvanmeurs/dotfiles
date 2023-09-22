@@ -45,6 +45,11 @@ chsh -s $(which fish)
 
 In tmux run `prefix + I` to install [tpm](https://github.com/tmux-plugins/tpm) packages.
 
+### Yabai
+
+- `yabai --start-service`
+- `skhd --start-service`
+
 ## Choices made
 
 - Using Age and YubiKeys for encryption ([age-plugin-yubikey](https://github.com/str4d/age-plugin-yubikey))

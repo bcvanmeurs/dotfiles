@@ -32,3 +32,7 @@ fish_add_path $HOME/.cargo/bin
 
 ## fzf
 set -gx FZF_DEFAULT_OPTS "--ansi"
+
+## OP
+set -gx OP_ACCOUNT LV4XK7GW6VGCBJHMIYAG26GFT4
+

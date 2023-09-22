@@ -49,7 +49,7 @@ if os.getenv("COLEMAK") == "true" then
   map("n", "<C-n>", "<C-w>j", { desc = "Go to lower window", remap = true })
   map("n", "<C-e>", "<C-w>k", { desc = "Go to upper window", remap = true })
   map("n", "<C-i>", "<C-w>l", { desc = "Go to right window", remap = true })
-  map("n", "<C-;>", "<C-i>", { desc = "Next place" })
+  map("n", "<C-y>", "<C-i>", { desc = "Next place" })
 
   -- Resize window using <ctrl> arrow keys
   -- map("n", "<C-Up>", "<cmd>resize +2<cr>", { desc = "Increase window height" })

@@ -1,10 +1,8 @@
 tap "buo/cask-upgrade"
 tap "cantino/mcfly"
 tap "homebrew/bundle"
-tap "homebrew/cask"
 tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
-tap "homebrew/core"
 tap "homebrew/services"
 tap "koekeishiya/formulae"
 
@@ -21,6 +19,7 @@ brew "fzf"
 brew "git"
 brew "git-delta"
 brew "gnupg"
+brew "gnu-sed"
 brew "gopass"
 brew "lazygit"
 brew "mas"
@@ -32,16 +31,19 @@ brew "cantino/mcfly/mcfly"
 brew "pre-commit"
 brew "pueue"
 brew "ripgrep"
+brew "rm-improved"
 brew "starship"
 brew "tmux"
 brew "tree"
 brew "watch"
 brew "wget"
 brew "zoxide"
+brew "zstd"
 brew "koekeishiya/formulae/skhd"
 brew "koekeishiya/formulae/yabai"
 
 cask "1password-cli"
+cask "alt-tab"
 cask "font-fira-code-nerd-font"
 cask "monitorcontrol"
 cask "wezterm"
@@ -72,9 +74,28 @@ brew "zlib"
 brew "tcl-tk"
 
 ## Casks
+cask "breaktimer"
 cask "docker"
 cask "obsidian"
 cask "raindropio"
+
+{{- if eq .hostname "A1519-Inactive" }}
+tap "flyteorg/tap"
+
+brew "awscli"
+brew "commitizen"
+brew "dvc"
+brew "flyteorg/homebrew-tap/flytectl"
+brew "kubectx"
+brew "k3d"
+brew "k9s"
+brew "oras"
+brew "terraform"
+brew "terragrunt"
+
+cask "openlens"
+cask "firefox"
+{{- end}}
 
 {{- if eq .hostname "Brams-MacBook-Air" }}
 ## Casks

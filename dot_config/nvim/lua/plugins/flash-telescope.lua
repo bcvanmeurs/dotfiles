@@ -2,16 +2,16 @@ return {
   {
     "folke/flash.nvim",
     opts = {
-      search = {
-        mode = function(str)
-          return "\\<" .. str
-        end,
-      },
-      modes = {
-        char = {
-          jump_labels = true,
-        },
-      },
+      -- search = {
+      --   mode = function(str)
+      --     return "\\<" .. str
+      --   end,
+      -- },
+      -- modes = {
+      --   char = {
+      --     jump_labels = true,
+      --   },
+      -- },
     },
   },
   {
@@ -24,5 +24,11 @@ return {
         require("telescope").load_extension("fzf")
       end,
     },
+    opts = {
+      defaults = {
+        layout_strategy = "flex",
+        layout_config = { flip_columns = 200 },
+      },
+    }
   },
 }
