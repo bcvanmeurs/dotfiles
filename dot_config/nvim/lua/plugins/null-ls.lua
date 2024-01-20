@@ -1,6 +1,7 @@
 local null_ls = require("null-ls")
 local formatting = null_ls.builtins.formatting
 local lint = null_ls.builtins.diagnostics
+local ca = null_ls.builtins.code_actions
 
 local mypy = lint.mypy.with({
   extra_args = function()
@@ -19,10 +20,22 @@ local null_ls_sources = {
   lint.ruff,
   formatting.black,
   mypy,
+
+  -- go
+  formatting.goimports,
+  formatting.gofumpt,
+  ca.gomodifytags,
+  ca.impl,
 }
 
 local mason = {
   "debugpy",
+  -- go
+  "goimports",
+  "gofumpt",
+  "gomodifytags",
+  "impl",
+  "delve",
 }
 
 return {

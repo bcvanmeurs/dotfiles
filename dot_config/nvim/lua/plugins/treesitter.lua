@@ -25,6 +25,12 @@ return {
       "python",
       "rust",
 
+      -- go
+      "go",
+      "gomod",
+      "gowork",
+      "gosum",
+
       -- text files
       "toml",
       "markdown",
