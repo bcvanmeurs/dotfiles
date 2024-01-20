@@ -8,6 +8,9 @@ return {
       "fish",
       "bash",
 
+      -- ops
+      "terraform",
+
       -- web dev
       "html",
       "css",
