@@ -5,3 +5,10 @@
 [http-basic.sensynehealth]
 username = "{{ $work.gemfury_download_key }}"
 {{ end -}}
+
+{{- if eq .hostname "A1519"}}
+
+[http-basic.adarga-pypi]
+username = {{ onepasswordRead "op://Private/Pypi/username" "X63GM56VTVDSRF2TUGZB345RSM" }}
+{{ end -}}
+

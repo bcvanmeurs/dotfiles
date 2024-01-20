@@ -79,22 +79,37 @@ cask "docker"
 cask "obsidian"
 cask "raindropio"
 
-{{- if eq .hostname "A1519-Inactive" }}
+{{- if eq .hostname "A1519" }}
 tap "flyteorg/tap"
+tap "dagger/tap"
 
+brew "argocd"
 brew "awscli"
 brew "commitizen"
+brew "dagger/tap/dagger"
+brew "docker"
 brew "dvc"
 brew "flyteorg/homebrew-tap/flytectl"
+brew "gomplate"
+brew "gopls"
+brew "helm"
 brew "kubectx"
 brew "k3d"
 brew "k9s"
-brew "oras"
+brew "kustomize"
+brew "minikube"
+# brew "oras"
+brew "slides"
 brew "terraform"
 brew "terragrunt"
 
-cask "openlens"
+
+cask "arc"
 cask "firefox"
+cask "openlens"
+cask "pycharm-ce"
+cask "vscodium"
+
 {{- end}}
 
 {{- if eq .hostname "Brams-MacBook-Air" }}

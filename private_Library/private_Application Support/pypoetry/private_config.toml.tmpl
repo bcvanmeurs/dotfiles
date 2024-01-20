@@ -1,5 +1,7 @@
 [virtualenvs]
-create = false
+create = true
+in-project = true
+prefer-active-python = true
 
 {{- if eq .hostname "SHPLC-T4VS" }}
 
@@ -9,4 +11,10 @@ url = "https://pypi.fury.io/sensynehealth/"
 
 [repositories.devpi]
 url = "http://localhost:4040/root/pypi/stable/"
+{{ end -}}
+
+{{- if eq .hostname "A1519"}}
+
+[repositories.adarga-pypi]
+url = {{ onepasswordRead "op://Private/Pypi/website" "X63GM56VTVDSRF2TUGZB345RSM" }}
 {{ end -}}
