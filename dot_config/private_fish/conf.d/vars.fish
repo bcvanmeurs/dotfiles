@@ -14,6 +14,9 @@ set -gx PATH $PYENV_ROOT/bin $PATH
 # Pipx / Poetry
 fish_add_path $HOME/.local/bin
 
+# Pip
+set -gx PIP_REQUIRE_VIRTUALENV true
+
 # Go
 fish_add_path $HOME/go/bin
 
@@ -31,8 +34,7 @@ set -gx MCFLY_RESULTS 40
 fish_add_path $HOME/.cargo/bin
 
 ## fzf
-set -gx FZF_DEFAULT_OPTS "--ansi"
+set -gx FZF_DEFAULT_OPTS --ansi
 
 ## OP
 set -gx OP_ACCOUNT LV4XK7GW6VGCBJHMIYAG26GFT4
-

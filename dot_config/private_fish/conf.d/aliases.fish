@@ -5,8 +5,27 @@ alias vim="nvim"
 alias v="fd --type file --hidden --exclude .git | fzf-tmux -p --reverse | xargs nvim"
 alias d="fd --type file --hidden --exclude .git . ~/.local/share/chezmoi | fzf-tmux -p --reverse | xargs nvim"
 
+## Git
+
+alias g="git"
+alias gcm="git checkout main"
+alias gst="git status"
+alias gaa="git add -A"
+alias gd="git diff"
+alias gds="git diff --staged"
+alias gp="git push"
+alias gpf="git push --force"
+alias gcb="git checkout -b"
+alias gco="git checkout"
+alias gcmsg="git commit -m"
+alias gl="git pull"
+
 ## Repos
-alias rep="cd ( fd -d 1 -t directory -c always . ~/repos/ | fzf --ansi )"
+# alias rep="cd ( fd -d 1 -t directory -c always . ~/repos/ | fzf --ansi )"
+function rep
+    cd (fd -d 1 -t directory -c always . ~/repos/ | fzf --ansi --height 40% --reverse --query "$argv")
+end
+
 alias rev="nvim ( fd -d 1 -t directory -c always . ~/repos/ | fzf --ansi )"
 alias lg="lazygit"
 
