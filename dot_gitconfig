@@ -30,8 +30,8 @@
 [diff]
     colorMoved = default
 
-[url "ssh://git@github.com/"]
-    insteadOf = https://github.com/
+; [url "ssh://git@github.com/"]
+;     insteadOf = https://github.com/
 
 ; [remote "origin"]
 ; 	fetch = +refs/heads/*:refs/remotes/origin/*
