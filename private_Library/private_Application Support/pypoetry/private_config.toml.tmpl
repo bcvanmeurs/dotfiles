@@ -16,5 +16,5 @@ url = "http://localhost:4040/root/pypi/stable/"
 {{- if eq .hostname "A1519"}}
 
 [repositories.adarga-pypi]
-url = {{ onepasswordRead "op://Private/Pypi/website" "X63GM56VTVDSRF2TUGZB345RSM" }}
+url = "{{ onepasswordRead "op://Private/Pypi/website" "X63GM56VTVDSRF2TUGZB345RSM" }}"
 {{ end -}}
