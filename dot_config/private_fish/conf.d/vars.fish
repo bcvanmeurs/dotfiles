@@ -1,6 +1,13 @@
 ## Colemak
 set -gx COLEMAK true
 
+## Set nvim as default editor
+set -gx EDITOR nvim
+set -gx VISUAL nvim
+
+## SSH Yubikey
+set -gx SSH_AUTH_SOCK "~/.ssh/agent"
+
 ## lazygit
 set -gx XDG_CONFIG_HOME "$HOME/.config"
 
@@ -25,10 +32,6 @@ set -gx GPG_TTY $(tty)
 
 # DevPi
 set PIP_INDEX_URL http://localhost:4040/root/pypi/+simple/
-
-# McFly
-# set -gx MCFLY_RESULTS_SORT LAST_RUN
-set -gx MCFLY_RESULTS 40
 
 ## rustup
 fish_add_path $HOME/.cargo/bin

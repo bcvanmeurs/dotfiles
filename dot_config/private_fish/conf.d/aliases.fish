@@ -49,6 +49,9 @@ alias dotconfig="cd ~/.config/chezmoi"
 alias g-='git checkout -'
 alias ghprv="gh pr view -w"
 
+## Gojq
+alias jq="gojq"
+
 ## Docker
 alias dc="docker-compose"
 
