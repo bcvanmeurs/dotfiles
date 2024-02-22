@@ -2,6 +2,7 @@ return {
   {
     "neovim/nvim-lspconfig",
     opts = {
+      format = { timeout_ms = 1000 },
       servers = {
         -- pyright will be automatically installed with mason and loaded with lspconfig
         pyright = {},

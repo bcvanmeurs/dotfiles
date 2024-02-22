@@ -18,7 +18,7 @@ local null_ls_sources = {
   -- python
   formatting.ruff,
   lint.ruff,
-  formatting.black,
+  -- formatting.black, using ruff now
   mypy,
 
   -- go
