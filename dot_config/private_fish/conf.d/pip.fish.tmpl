@@ -2,5 +2,7 @@
 
 # External package registry
 # This allows pip to pull packages from a custom package registry:
-set -gx PIP_EXTRA_INDEX_URL {{ $work.pip_extra_index_url }}
-set -gx GEMFURY_DOWNLOAD_KEY {{ $work.gemfury_download_key }}
+set -gx POETRY_HTTP_BASIC_ADARGA_PYPI_USERNAME {{ $work.jfrog_username }}
+set -gx POETRY_HTTP_BASIC_ADARGA_PYPI_PASSWORD {{ $work.jfrog_token }}
+set -gx CI_SETTINGS__JFROG__USERNAME {{ $work.jfrog_username }}
+set -gx CI_SETTINGS__JFROG__PASSWORD {{ $work.jfrog_token }}
