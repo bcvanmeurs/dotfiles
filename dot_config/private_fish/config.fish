@@ -5,4 +5,5 @@ if status is-interactive
     # mcfly init fish | source
     pyenv init - | source
     # pyenv virtualenv-init - | source
+    /opt/homebrew/opt/mise/bin/mise activate fish | source
 end
