@@ -31,7 +31,7 @@ fish_add_path $HOME/go/bin
 set -gx GPG_TTY $(tty)
 
 # DevPi
-set PIP_INDEX_URL http://localhost:4040/root/pypi/+simple/
+# set PIP_INDEX_URL http://localhost:4040/root/pypi/+simple/
 
 ## rustup
 fish_add_path $HOME/.cargo/bin

@@ -4,6 +4,10 @@ alias vim="nvim"
 
 alias v="fd --type file --hidden --exclude .git | fzf-tmux -p --reverse | xargs nvim"
 alias d="fd --type file --hidden --exclude .git . ~/.local/share/chezmoi | fzf-tmux -p --reverse | xargs nvim"
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias ......="cd ../../../../.."
 
 ## Git
 
