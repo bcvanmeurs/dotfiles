@@ -12,13 +12,12 @@ local mypy = lint.mypy.with({
 
 local null_ls_sources = {
   -- general
-  lint.shellcheck,
   formatting.prettierd.with({ disabled_filetypes = { "python" } }),
+  lint.fish,
+  formatting.fish_indent,
+  formatting.shfmt,
 
   -- python
-  formatting.ruff,
-  lint.ruff,
-  -- formatting.black, using ruff now
   mypy,
 
   -- go

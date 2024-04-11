@@ -5,7 +5,23 @@ return {
       format = { timeout_ms = 1000 },
       servers = {
         -- pyright will be automatically installed with mason and loaded with lspconfig
-        pyright = {},
+        pyright = {
+          settings = {
+            pyright = {
+              disableOrganizeImports = true,
+            },
+            -- python = {
+            --   analysis = {
+            --     ignore = { "*" },
+            --   },
+            -- },
+          },
+        },
+        -- pylsp = {
+        --   plugins = { rope_autoimport = { enabled = true } },
+        -- },
+        bashls = {},
+        ruff_lsp = {},
         terraformls = {},
         gopls = {
           keys = {
