@@ -3,6 +3,9 @@ return {
     "neovim/nvim-lspconfig",
     opts = {
       format = { timeout_ms = 1000 },
+      -- inlay_hints = {
+      --   enabled = true,
+      -- },
       servers = {
         -- pyright will be automatically installed with mason and loaded with lspconfig
         pyright = {
@@ -21,7 +24,6 @@ return {
         --   plugins = { rope_autoimport = { enabled = true } },
         -- },
         bashls = {},
-        ruff_lsp = {},
         terraformls = {},
         gopls = {
           keys = {

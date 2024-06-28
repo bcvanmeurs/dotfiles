@@ -7,7 +7,7 @@ local config = {}
 -- In newer versions of wezterm, use the config_builder which will
 -- help provide clearer error messages
 if wezterm.config_builder then
-  config = wezterm.config_builder()
+	config = wezterm.config_builder()
 end
 
 -- This is where you actually apply your config choices
@@ -17,15 +17,19 @@ config.font = wezterm.font("FiraCode Nerd Font")
 config.font_size = 14
 config.color_scheme = "Tokyo Night Moon"
 
+-- Make right alt keyw work as expected
+config.send_composed_key_when_left_alt_is_pressed = true
+-- config.send_composed_key_when_right_alt_is_pressed = true
+
 config.window_padding = {
-  left = "1cell",
-  right = "1cell",
-  top = "0.5cell",
-  bottom = 0,
+	left = "1cell",
+	right = "1cell",
+	top = "0.5cell",
+	bottom = 0,
 }
 
 -- Spawn a fish shell in login mode
-config.default_prog = { '/opt/homebrew/bin/tmux' }
+config.default_prog = { "/opt/homebrew/bin/tmux" }
 -- config.default_prog = { '/opt/homebrew/bin/tmux', 'new-session', '-A', '-s main' }
 
 -- and finally, return the configuration to wezterm
