@@ -2,7 +2,5 @@
 
 # External package registry
 # This allows pip to pull packages from a custom package registry:
-set -gx POETRY_HTTP_BASIC_ADARGA_PYPI_USERNAME {{ $work.jfrog_username }}
-set -gx POETRY_HTTP_BASIC_ADARGA_PYPI_PASSWORD {{ $work.jfrog_token }}
-set -gx CI_SETTINGS__JFROG__USERNAME {{ $work.jfrog_username }}
-set -gx CI_SETTINGS__JFROG__PASSWORD {{ $work.jfrog_token }}
+set -gx POETRY_HTTP_BASIC_ADARGA_PYPI_USERNAME {{ $work.pypi_token }}
+set -gx CI_SETTINGS__PACKAGECLOUD__TOKEN {{ $work.pypi_token }}
