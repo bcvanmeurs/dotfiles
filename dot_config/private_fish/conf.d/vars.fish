@@ -13,6 +13,8 @@ set -gx XDG_CONFIG_HOME "$HOME/.config"
 
 # Homebrew
 eval "$(/opt/homebrew/bin/brew shellenv)"
+# Make sure that brew is prepended to the PATH (for ssh)
+fish_add_path /opt/homebrew/bin
 
 # Pyenv
 set -gx PYENV_ROOT $HOME/.pyenv
