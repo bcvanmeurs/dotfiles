@@ -31,6 +31,11 @@ end
 -- Save file -- clashes with window prefix
 -- vim.keymap.set("n", "<leader>w", "<cmd>w<cr>", { noremap = true, desc = "Save window" })
 
+-- Open in GH
+map("n", "<Leader>gr", "<cmd>OpenInGHRepo<CR>", { silent = true, desc = "Open GitHub repository page" })
+map("n", "<Leader>go", "<cmd>OpenInGHFile<CR>", { silent = true, desc = "Open current file in GitHub" })
+map("v", "<Leader>go", "<cmd>OpenInGHFileLines<CR>", { silent = true, desc = "Open selected lines in GitHub" })
+
 if os.getenv("COLEMAK") == "true" then
   -- Colemak setup
   -- better up/down
