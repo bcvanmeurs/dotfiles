@@ -1,7 +1,0 @@
-{{- $work := include "data/work.yaml.age" | decrypt | fromYaml -}}
-{{- if eq .hostname "SHPLC-T4VS" -}}
-
-[http-basic]
-[http-basic.sensynehealth]
-username = "{{ $work.gemfury_download_key }}"
-{{ end -}}

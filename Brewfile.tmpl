@@ -1,10 +1,11 @@
 tap "buo/cask-upgrade"
+tap "homebrew/autoupdate"
 tap "homebrew/bundle"
 tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
 tap "homebrew/services"
-tap "koekeishiya/formulae"
 tap "aws/tap"
+tap "nikitabobko/tap" # aerospace
 tap "jesseduffield/lazydocker"
 
 ## Essentials
@@ -16,8 +17,10 @@ brew "broot"
 brew "chezmoi"
 brew "direnv" # not needed with mise
 brew "dust"
-brew "exa"
+brew "dive"
+brew "eza"
 brew "fd"
+brew "fx"
 brew "fish"
 brew "fzf"
 brew "git"
@@ -54,6 +57,7 @@ brew "koekeishiya/formulae/yabai"
 # brew "mprocs"
 
 cask "1password-cli"
+cask "aerospace"
 cask "alt-tab"
 cask "font-fira-code-nerd-font"
 cask "monitorcontrol"
@@ -103,14 +107,17 @@ cask "raindropio"
 cask "raycast"
 
 {{- if eq .hostname "A1519" }}
-tap "flyteorg/tap"
 tap "dagger/tap"
+tap "defenseunicorns/tap" # Zarf
+tap "flyteorg/tap"
 
 brew "argocd"
 brew "awscli"
 brew "aws/tap/eks-node-viewer"
+brew "bash"
 brew "commitizen"
 brew "dagger/tap/dagger"
+brew "defenseunicorns/tap/zarf"
 brew "dvc"
 brew "flyteorg/homebrew-tap/flytectl"
 brew "gomplate"
@@ -123,6 +130,8 @@ brew "minikube"
 # brew "oras"
 brew "slides"
 brew "terragrunt"
+brew "wireguard-go"
+brew "wireguard-tools"
 
 
 cask "arc"
@@ -132,6 +141,7 @@ cask "openlens"
 cask "pycharm-ce"
 cask "signal"
 cask "vscodium"
+cask "visual-studio-code"
 
 {{- end}}
 

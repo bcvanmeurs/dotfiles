@@ -33,10 +33,10 @@ end
 alias rev="nvim ( fd -d 1 -t directory -c always . ~/repos/ | fzf --ansi )"
 alias lg="lazygit"
 
-## exa
-set -gx EXA_GRID_ROWS 10
-alias ls="COLUMNS=80 exa --icons"
-alias ll="exa --long --header --grid --git --no-permissions --no-user --icons"
+## EZA
+set -gx EZA_GRID_ROWS 10
+alias ls="COLUMNS=80 eza --icons"
+alias ll="eza --long --header --grid --git --no-permissions --no-user --icons"
 alias tree="ll -T --git-ignore"
 alias la="ls -a"
 alias lla="ll -a"

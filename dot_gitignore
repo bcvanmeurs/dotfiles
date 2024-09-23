@@ -3,6 +3,7 @@ scratchpad.*
 pyrightconfig.json
 ruff.toml
 .envrc
+.venv/
 .mise.toml
 
 # Editors
