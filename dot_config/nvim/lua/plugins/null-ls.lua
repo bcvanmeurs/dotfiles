@@ -16,6 +16,9 @@ local null_ls_sources = {
   lint.fish,
   formatting.fish_indent,
   formatting.shfmt,
+  -- lint.markdownlint_cli2.with({
+  --   extra_args = { "--config", vim.fn.expand("~/.config/nvim/lua/plugins/.markdownlint-cli2.yaml") },
+  -- }),
 
   -- python
   mypy,
@@ -35,6 +38,10 @@ local mason = {
   "gomodifytags",
   "impl",
   "delve",
+  -- templ, html, htmx
+  "html",
+  "htmx",
+  "tailwindcss",
 }
 
 return {

@@ -25,6 +25,10 @@ return {
         -- },
         bashls = {},
         terraformls = {},
+        templ = {},
+        html = { setup = { filetypes = { "html", "templ" } } },
+        htmx = { setup = { filetypes = { "html", "templ" } } },
+        tailwindcss = { setup = { filetypes = { "html", "templ" } } },
         gopls = {
           keys = {
             -- Workaround for the lack of a DAP strategy in neotest-go: https://github.com/nvim-neotest/neotest-go/issues/12

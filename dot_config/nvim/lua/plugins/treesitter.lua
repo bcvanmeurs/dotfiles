@@ -18,6 +18,7 @@ return {
       "typescript",
       "json",
       "yaml",
+      "templ",
       -- "vue",
       -- "svelte",
 
