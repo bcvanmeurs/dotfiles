@@ -73,7 +73,9 @@ In tmux run `prefix + I` to install [tpm](https://github.com/tmux-plugins/tpm) p
 Brew runs automated when the brewfile has changed. To manually run use:
 
 - `brew bundle install --no-upgrade`
-- `brew bundle cleanup`
+- `chezmoi apply ~/Brewfile && brew bundle install --file ~/Brewfile --no-upgrade`
+- `brew bundle cleanup --file ~/Brewfile`
+- `chezmoi apply ~/Brewfile && brew bundle cleanup --file ~/Brewfile`
 - `brew cu`
 - `brew cu -a -i` for interactive mode on auto updatable programs
 

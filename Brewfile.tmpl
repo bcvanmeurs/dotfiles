@@ -128,6 +128,7 @@ brew "minikube"
 # brew "oras"
 brew "slides"
 brew "terragrunt"
+brew "terraform-docs"
 brew "wireguard-go"
 brew "wireguard-tools"
 
@@ -194,46 +195,3 @@ mas "WireGuard", id: 1451685025
 mas "Yubico Authenticator", id: 1497506650
 {{- end  }}
 
-{{- if eq .hostname "SHPLC-T4VS" }}
-
-### HOST SHPLC-T4VS ###
-tap "microsoft/mssql-release"
-brew "argo"
-brew "argocd"
-brew "azure-cli"
-brew "circleci"
-brew "cookiecutter"
-brew "graphviz"
-brew "helm"
-brew "k3d"
-brew "k9s"
-brew "kind"
-brew "kubernetes-cli"
-brew "kubectx"
-brew "kustomize"
-brew "minikube"
-brew "terraform"
-brew "terraform-docs"
-brew "tflint"
-brew "tfsec"
-brew "parallel"
-brew "microsoft/mssql-release/msodbcsql18"
-brew "microsoft/mssql-release/mssql-tools18"
-
-cask "beekeeper-studio"
-cask "breaktimer"
-cask "db-browser-for-sqlite"
-cask "azure-data-studio"
-cask "keybase"
-cask "microsoft-auto-update"
-cask "microsoft-azure-storage-explorer"
-cask "microsoft-edge"
-cask "microsoft-teams"
-cask "pgadmin4"
-cask "lens"
-
-mas "Azure VPN Client", id: 1553936137
-mas "Microsoft To Do", id: 1274495053
-mas "Slack", id: 803453959
-### END ###
-{{- end  }}
