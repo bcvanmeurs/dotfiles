@@ -5,6 +5,7 @@ ruff.toml
 .envrc
 .venv/
 .mise.toml
+.aider*
 
 # Editors
 .idea
