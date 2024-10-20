@@ -81,4 +81,3 @@ ctrl + cmd - i : yabai -m window east --resize left:50:0 2> /dev/null || yabai -
 
 # ctrl + shift - space : yabai -m space --layout "$(yabai -m query --spaces --space | jq -r 'if .type == "bsp" then "stack" else "bsp" end')"
 ctrl + shift - f : yabai -m query --windows --space | jq '.[].id' | xargs -I{} yabai -m window {} --toggle zoom-fullscreen
-

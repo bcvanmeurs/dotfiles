@@ -12,8 +12,8 @@ repos:
     rev: "v3.0.0"
     hooks:
       - id: prettier
-  - repo: https://github.com/JohnnyMorganz/StyLua
-    rev: v0.18.0
-    hooks:
-      - id: stylua-github
-        args: [--config-path=./dot_config/nvim/stylua.toml]
+  # - repo: https://github.com/JohnnyMorganz/StyLua
+  #   rev: v0.18.0
+  #   hooks:
+  #     - id: stylua-github
+  #       args: [--config-path=./dot_config/nvim/stylua.toml]
