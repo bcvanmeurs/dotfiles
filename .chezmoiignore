@@ -1,6 +1,7 @@
 README.md
 ignored/
 data/
+justfile
 
 {{- if ne .hostname "SHPLC-T4VS" }}
 
