@@ -79,6 +79,8 @@ Brew runs automated when the brewfile has changed. To manually run use:
 - `brew cu`
 - `brew cu -a -i` for interactive mode on auto updatable programs
 
+- [More brew tips and tricks](https://gist.github.com/jamesmurdza/6e5f86bae7d3b3db4201a52045a5e477)
+
 ## Encryption
 
 ### Encryption with age

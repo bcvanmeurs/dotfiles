@@ -10,8 +10,8 @@ brew-clean:
     brew cleanup
 
 brew-upgrade:
-    if [ ! -f "~/Library/Application Support/pueue/pueue.pid" ]; then \
-        pueued -d; \
+    if [ ! -f "$HOME/Library/Application Support/pueue/pueue.pid" ]; then \
+      pueued -d; \
     fi
     pueue add 'brew update && brew upgrade && curl -sd "Update brew successful" ntfy.local.vanmeurs.dev/test || { curl -sd "Update brew failed" ntfy.local.vanmeurs.dev/test; exit 1; }'
 
