@@ -1,6 +1,6 @@
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.4.0
+    rev: v5.0.0
     hooks:
       - id: trailing-whitespace
       - id: end-of-file-fixer
@@ -9,9 +9,18 @@ repos:
       - id: check-added-large-files
       - id: detect-private-key
   - repo: https://github.com/pre-commit/mirrors-prettier
-    rev: "v3.0.0"
+    rev: "v4.0.0-alpha.8"
     hooks:
       - id: prettier
+        exclude: dot_config/nix-darwin/flake.lock
+  - repo: local
+    hooks:
+      - id: nix-fmt
+        name: nix-fmt
+        entry: bash -c 'nixfmt .'
+        language: system
+        types: [nix]
+        pass_filenames: false
   # - repo: https://github.com/JohnnyMorganz/StyLua
   #   rev: v0.18.0
   #   hooks:
