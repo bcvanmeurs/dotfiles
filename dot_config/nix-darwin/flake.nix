@@ -5,6 +5,7 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     nix-darwin.url = "github:LnL7/nix-darwin";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
+    nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
   };
 
   outputs =
@@ -12,6 +13,7 @@
       self,
       nix-darwin,
       nixpkgs,
+      nix-homebrew,
     }:
     let
       configuration =
@@ -23,7 +25,16 @@
             pkgs.vim
             pkgs.neovim
             pkgs.nixfmt-rfc-style
+            pkgs.chezmoi
           ];
+
+          homebrew = {
+            enable = true;
+            casks = [
+              "firefox"
+            ];
+            onActivation.cleanup = "zap";
+          };
 
           # Auto upgrade nix package and the daemon service.
           services.nix-daemon.enable = true;
@@ -52,7 +63,18 @@
       # Build darwin flake using:
       # $ darwin-rebuild build --flake .#Brams-MacBook-Air
       darwinConfigurations."Brams-MacBook-Air" = nix-darwin.lib.darwinSystem {
-        modules = [ configuration ];
+        modules = [
+          configuration
+          nix-homebrew.darwinModules.nix-homebrew
+          {
+            nix-homebrew = {
+              enable = true;
+              enableRosetta = true;
+              user = "bram";
+            };
+          }
+
+        ];
       };
 
       # Expose the package set, including overlays, for convenience.
