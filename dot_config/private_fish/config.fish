@@ -6,7 +6,7 @@ if status is-interactive
     pyenv init - | source
     # pyenv virtualenv-init - | source
     direnv hook fish | source
-    /opt/homebrew/opt/mise/bin/mise activate fish | source
+    mise activate fish | source
     # set -q KREW_ROOT; and set -gx PATH $PATH $KREW_ROOT/.krew/bin; or set -gx PATH $PATH $HOME/.krew/bin
     set -gx PATH $PATH $HOME/.krew/bin
 end

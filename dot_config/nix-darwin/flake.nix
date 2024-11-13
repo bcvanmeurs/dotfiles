@@ -3,10 +3,16 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+
+    # nix-darwin
     nix-darwin.url = "github:LnL7/nix-darwin";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
+
+    # home-manager
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+
+    # nix-homebrew
     nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
   };
 
@@ -29,15 +35,28 @@
             pkgs.neovim
             pkgs.nixfmt-rfc-style
             pkgs.chezmoi
+            pkgs.openssh # for yubikey
+            pkgs.gnupg
+            pkgs.pinentry_mac
+            pkgs.age
+            pkgs.age-plugin-yubikey
+            pkgs._1password-cli
           ];
-
+          users.users.bram = {
+            name = "bram";
+            home = "/Users/bram"; # https://github.com/nix-community/home-manager/issues/6036
+            shell = pkgs.fish;
+          };
           homebrew = {
             enable = true;
+            brews = [ ];
             casks = [
               "firefox"
             ];
             onActivation.cleanup = "zap";
           };
+
+          nixpkgs.config.allowUnfree = true;
 
           # Auto upgrade nix package and the daemon service.
           services.nix-daemon.enable = true;
@@ -68,6 +87,12 @@
       darwinConfigurations."Brams-MacBook-Air" = nix-darwin.lib.darwinSystem {
         modules = [
           configuration
+          home-manager.darwinModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.bram = import ./home.nix;
+          }
           nix-homebrew.darwinModules.nix-homebrew
           {
             nix-homebrew = {
@@ -76,7 +101,6 @@
               user = "bram";
             };
           }
-
         ];
       };
 
