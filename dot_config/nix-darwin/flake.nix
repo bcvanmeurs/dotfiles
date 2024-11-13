@@ -41,6 +41,7 @@
             pkgs.age
             pkgs.age-plugin-yubikey
             pkgs._1password-cli
+            pkgs.tmux
           ];
           users.users.bram = {
             name = "bram";

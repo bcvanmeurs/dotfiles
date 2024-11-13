@@ -29,7 +29,7 @@ config.window_padding = {
 }
 
 -- Spawn a fish shell in login mode
-config.default_prog = { "/etc/profiles/per-user/bram/bin/tmux" }
+config.default_prog = { "/run/current-system/sw/bin/tmux" }
 -- config.default_prog = { '/opt/homebrew/bin/tmux', 'new-session', '-A', '-s main' }
 
 -- and finally, return the configuration to wezterm
