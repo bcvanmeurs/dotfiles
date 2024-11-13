@@ -12,7 +12,6 @@
     pkgs.gojq
     pkgs.pre-commit
     pkgs.delta # can be part of git program
-    pkgs.tmux
   ];
 
   # This value determines the Home Manager release that your
