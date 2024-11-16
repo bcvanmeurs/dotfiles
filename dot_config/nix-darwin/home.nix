@@ -3,8 +3,8 @@
 {
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
-  home.username = "bram";
-  home.homeDirectory = "/Users/bram";
+  # home.username = "bram"; # set as extraSpecialArgs in flake.nix
+  # home.homeDirectory = "/Users/bram";
   xdg.enable = true;
 
   # Packages that should be installed to the user profile.

@@ -43,18 +43,18 @@
             pkgs._1password-cli
             pkgs.tmux
           ];
-          users.users.bram = {
-            name = "bram";
-            home = "/Users/bram"; # https://github.com/nix-community/home-manager/issues/6036
-            shell = pkgs.fish;
-          };
+          # users.users.${userName} = {
+          #   name = userName;
+          #   home = "/Users/${userName}"; # https://github.com/nix-community/home-manager/issues/6036
+          #   shell = pkgs.fish;
+          # };
           homebrew = {
             enable = true;
             brews = [ ];
             casks = [
               "firefox"
             ];
-            onActivation.cleanup = "zap";
+            # onActivation.cleanup = "zap";
           };
 
           nixpkgs.config.allowUnfree = true;
@@ -81,6 +81,13 @@
           # The platform the configuration will be used on.
           nixpkgs.hostPlatform = "aarch64-darwin";
         };
+        userConfig = { name }: {
+          users.users.${name} = {
+            name = name;
+            home = "/Users/${name}";
+          };
+        };
+
     in
     {
       # Build darwin flake using:
@@ -88,11 +95,15 @@
       darwinConfigurations."Brams-MacBook-Air" = nix-darwin.lib.darwinSystem {
         modules = [
           configuration
+          (userConfig { name ="bram";} )
           home-manager.darwinModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.bram = import ./home.nix;
+            home-manager.users.bram = import ./home.nix {
+              home.userName = "bram";
+              home.homeDirectory = "/Users/bram";
+            };
           }
           nix-homebrew.darwinModules.nix-homebrew
           {
@@ -105,6 +116,30 @@
         ];
       };
 
+      darwinConfigurations."A1519" = nix-darwin.lib.darwinSystem {
+        modules = [
+          configuration
+          (userConfig { name ="bramvanmeurs";} )
+          home-manager.darwinModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.bramvanmeurs = import ./home.nix;
+            home-manager.extraSpecialArgs = {
+              home.userName = "bramvanmeurs";
+              home.homeDirectory = "/Users/bramvanmeurs";
+            };
+          }
+          # nix-homebrew.darwinModules.nix-homebrew
+          # {
+          #   nix-homebrew = {
+          #     enable = true;
+          #     enableRosetta = true;
+          #     user = "bramvanmeurs";
+          #   };
+          # }
+        ];
+      };
       # Expose the package set, including overlays, for convenience.
       darwinPackages = self.darwinConfigurations."Brams-MacBook-Air".pkgs;
     };
