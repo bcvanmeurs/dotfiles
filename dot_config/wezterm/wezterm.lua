@@ -32,5 +32,15 @@ config.window_padding = {
 config.default_prog = { "/run/current-system/sw/bin/tmux" }
 -- config.default_prog = { '/opt/homebrew/bin/tmux', 'new-session', '-A', '-s main' }
 
+config.skip_close_confirmation_for_processes_named = {
+	"tmux",
+	"nvim",
+	"vim",
+	"fish",
+	"bash",
+	"sh",
+	"/run/current-system/sw/bin/tmux",
+}
+
 -- and finally, return the configuration to wezterm
 return config
