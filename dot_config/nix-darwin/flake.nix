@@ -81,10 +81,14 @@
           # The platform the configuration will be used on.
           nixpkgs.hostPlatform = "aarch64-darwin";
         };
-        userConfig = { name }: {
+      userConfig =
+        { name }:
+        { pkgs, ... }:
+        {
           users.users.${name} = {
             name = name;
             home = "/Users/${name}";
+            shell = pkgs.fish;
           };
         };
 
@@ -95,7 +99,7 @@
       darwinConfigurations."Brams-MacBook-Air" = nix-darwin.lib.darwinSystem {
         modules = [
           configuration
-          (userConfig { name ="bram";} )
+          (userConfig { name = "bram"; })
           home-manager.darwinModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
@@ -119,7 +123,7 @@
       darwinConfigurations."A1519" = nix-darwin.lib.darwinSystem {
         modules = [
           configuration
-          (userConfig { name ="bramvanmeurs";} )
+          (userConfig { name = "bramvanmeurs"; })
           home-manager.darwinModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
