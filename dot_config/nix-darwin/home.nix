@@ -12,6 +12,10 @@
     pkgs.gojq
     pkgs.pre-commit
     pkgs.delta # can be part of git program
+    pkgs.git-lfs
+    pkgs.kubectl
+    pkgs.kubectx
+    pkgs.minikube
   ];
 
   # This value determines the Home Manager release that your
