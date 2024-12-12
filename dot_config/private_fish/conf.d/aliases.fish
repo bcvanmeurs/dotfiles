@@ -72,3 +72,9 @@ alias kevw="k get ev --sort-by='.lastTimestamp' --field-selector type=Warning"
 ## Terraform
 alias tp="terraform plan -out tfplan"
 alias ta="terraform apply"
+
+## AWS
+alias aws-login='AZURE_DEFAULT_ROLE_ARN=$(op --account=X63GM56VTVDSRF2TUGZB345RSM read "op://Employee/Adarga/role") \
+	aws-azure-login -p AdargaAWS'
+
+alias docker-login='aws --profile adarga-labs ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin 382855879375.dkr.ecr.eu-west-2.amazonaws.com'
