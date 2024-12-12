@@ -15,5 +15,11 @@ brew-upgrade:
     fi
     pueue add 'brew update && brew upgrade && curl -sd "Update brew successful" ntfy.local.vanmeurs.dev/test || { curl -sd "Update brew failed" ntfy.local.vanmeurs.dev/test; exit 1; }'
 
+rebuild:
+  chezmoi apply ~/.config/nix-darwin/* && darwin-rebuild switch --flake ~/.config/nix-darwin
+
+update:
+  nix flake update --flake ./dot_config/nix-darwin/
+
 just-fmt:
     just --fmt --unstable

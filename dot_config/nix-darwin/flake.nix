@@ -42,6 +42,7 @@
             pkgs.age-plugin-yubikey
             pkgs._1password-cli
             pkgs.tmux
+            pkgs.pam-reattach
           ];
           # users.users.${userName} = {
           #   name = userName;
@@ -80,6 +81,16 @@
 
           # The platform the configuration will be used on.
           nixpkgs.hostPlatform = "aarch64-darwin";
+
+          # System config
+          # security.pam.enableSudoTouchIdAuth = true;
+          # https://write.rog.gr/writing/using-touchid-with-tmux/
+          environment.etc."pam.d/sudo_local".text = ''
+            # Managed by Nix Darwin
+            auth       optional       ${pkgs.pam-reattach}/lib/pam/pam_reattach.so ignore_ssh
+            auth       sufficient     pam_tid.so
+          '';
+
         };
       userConfig =
         { name }:
