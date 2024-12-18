@@ -8,14 +8,45 @@
   xdg.enable = true;
 
   # Packages that should be installed to the user profile.
-  home.packages = [
-    pkgs.gojq
-    pkgs.pre-commit
-    pkgs.delta # can be part of git program
-    pkgs.git-lfs
-    pkgs.kubectl
-    pkgs.kubectx
-    pkgs.minikube
+  home.packages = with pkgs; [
+    ## Essentials
+    age
+    age-plugin-yubikey
+    delta # can be part of git program
+    nerd-fonts.fira-code
+    git-lfs
+    gnused
+    gojq
+    kubectl
+    kubectx
+    minikube
+    pre-commit
+    ripgrep
+    ripgrep-all
+    rm-improved
+    tree
+    tlrc # tldr client in rust
+    uv
+    wget
+
+    dive
+    dust
+    fx
+    # httpie
+    lazydocker
+    parallel
+    prettierd
+    procps # watch
+    pueue
+    zstd
+
+    # lf
+    # ranger
+    # mprocs
+
+    ## applications
+    alt-tab
+    monitorcontrol
   ];
 
   # This value determines the Home Manager release that your
@@ -38,6 +69,10 @@
       vimAlias = true;
     };
     bat.enable = true;
+    broot = {
+      enable = true;
+      enableFishIntegration = true;
+    };
     direnv = {
       enable = true;
       enableFishIntegration = true;
@@ -68,6 +103,7 @@
       enable = true;
       enableFishIntegration = true;
     };
+    wezterm.enable = true;
     zoxide = {
       enable = true;
       enableFishIntegration = true;
