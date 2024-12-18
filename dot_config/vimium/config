@@ -10,3 +10,6 @@ map l goBack
 map u goForward
 map , performBackwardsFind
 map . performFind
+
+# Search engines
+# w: https://www.wikipedia.org/w/index.php?title=Special:Search&search=%s Wikipedia
