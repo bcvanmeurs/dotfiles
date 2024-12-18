@@ -44,6 +44,9 @@
             pkgs.tmux
             pkgs.pam-reattach
           ];
+          # services = {
+          #   aerospace.enable = true; # need a way to parse config
+          # };
           # users.users.${userName} = {
           #   name = userName;
           #   home = "/Users/${userName}"; # https://github.com/nix-community/home-manager/issues/6036
@@ -53,6 +56,7 @@
             enable = true;
             brews = [ ];
             casks = [
+              "aerospace"
               "firefox"
             ];
             # onActivation.cleanup = "zap";
