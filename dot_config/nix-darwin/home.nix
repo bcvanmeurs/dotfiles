@@ -10,6 +10,7 @@
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
     ## Essentials
+    aerospace
     age
     age-plugin-yubikey
     delta # can be part of git program
@@ -27,6 +28,7 @@
     tree
     tlrc # tldr client in rust
     uv
+    wezterm
     wget
 
     dive
@@ -45,7 +47,7 @@
     # mprocs
 
     ## applications
-    alt-tab
+    alt-tab-macos
     monitorcontrol
   ];
 
@@ -103,7 +105,7 @@
       enable = true;
       enableFishIntegration = true;
     };
-    wezterm.enable = true;
+    # wezterm.enable = true;
     zoxide = {
       enable = true;
       enableFishIntegration = true;
