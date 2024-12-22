@@ -56,7 +56,6 @@
             enable = true;
             brews = [ ];
             casks = [
-              "aerospace"
               "firefox"
             ];
             # onActivation.cleanup = "zap";
@@ -119,7 +118,8 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.bram = import ./home.nix {
+            home-manager.users.bram = import ./home.nix;
+            home-manager.extraSpecialArgs = {
               home.userName = "bram";
               home.homeDirectory = "/Users/bram";
             };
