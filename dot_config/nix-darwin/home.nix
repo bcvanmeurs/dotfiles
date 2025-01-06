@@ -1,5 +1,8 @@
 { config, pkgs, ... }:
-
+let
+  # Importing package groups
+  private = import ./private.nix { inherit pkgs; };
+in
 {
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
@@ -8,48 +11,53 @@
   xdg.enable = true;
 
   # Packages that should be installed to the user profile.
-  home.packages = with pkgs; [
-    ## Essentials
-    aerospace
-    age
-    age-plugin-yubikey
-    delta # can be part of git program
-    nerd-fonts.fira-code
-    git-lfs
-    gnused
-    gojq
-    kubectl
-    kubectx
-    minikube
-    pre-commit
-    ripgrep
-    ripgrep-all
-    rm-improved
-    tree
-    tlrc # tldr client in rust
-    uv
-    wezterm
-    wget
+  home.packages =
+    with pkgs;
+    [
+      ## Essentials
+      aerospace
+      age
+      age-plugin-yubikey
+      delta # can be part of git program
+      ghostty
+      nerd-fonts.fira-code
+      git-lfs
+      gnused
+      gojq
+      just
+      kubectl
+      kubectx
+      minikube
+      pre-commit
+      rip2
+      ripgrep
+      ripgrep-all
+      tree
+      tlrc # tldr client in rust
+      uv
+      wezterm
+      wget
 
-    dive
-    dust
-    fx
-    # httpie
-    lazydocker
-    parallel
-    prettierd
-    procps # watch
-    pueue
-    zstd
+      dive
+      dust
+      fx
+      # httpie
+      lazydocker
+      parallel
+      prettierd
+      procps # watch
+      pueue
+      zstd
 
-    # lf
-    # ranger
-    # mprocs
+      # lf
+      # ranger
+      # mprocs
 
-    ## applications
-    alt-tab-macos
-    monitorcontrol
-  ];
+      ## applications
+      alt-tab-macos
+      monitorcontrol
+    ]
+    ++ private;
 
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage
