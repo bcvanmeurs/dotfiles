@@ -138,25 +138,25 @@
       darwinConfigurations."A1519" = nix-darwin.lib.darwinSystem {
         modules = [
           configuration
-          (userConfig { name = "bramvanmeurs"; })
+          (userConfig { name = "bram.vanmeurs"; })
           home-manager.darwinModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.bramvanmeurs = import ./home.nix;
+            home-manager.users."bram.vanmeurs" = import ./home.nix;
             home-manager.extraSpecialArgs = {
-              home.userName = "bramvanmeurs";
-              home.homeDirectory = "/Users/bramvanmeurs";
+              home.userName = "bram.vanmeurs";
+              home.homeDirectory = "/Users/bram.vanmeurs";
             };
           }
-          # nix-homebrew.darwinModules.nix-homebrew
-          # {
-          #   nix-homebrew = {
-          #     enable = true;
-          #     enableRosetta = true;
-          #     user = "bramvanmeurs";
-          #   };
-          # }
+          nix-homebrew.darwinModules.nix-homebrew
+          {
+            nix-homebrew = {
+              enable = true;
+              enableRosetta = true;
+              user = "bram.vanmeurs";
+            };
+          }
         ];
       };
       # Expose the package set, including overlays, for convenience.
