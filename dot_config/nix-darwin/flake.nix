@@ -96,6 +96,30 @@
             auth       optional       ${pkgs.pam-reattach}/lib/pam/pam_reattach.so ignore_ssh
             auth       sufficient     pam_tid.so
           '';
+          system.defaults = {
+            # Don’t rearrange spaces based on the most recent use
+            finder.AppleShowAllExtensions = true;
+            # List view: "Nlsv"
+            finder.FXPreferredViewStyle = "Nlsv";
+            finder.ShowPathbar = true;
+            controlcenter.Sound = true;
+            dock.autohide = true;
+            dock.mru-spaces = false;
+            dock.expose-group-apps = true;
+            dock.orientation = "left";
+            dock.show-recents = false;
+            spaces.spans-displays = true;
+          };
+          system.defaults.dock.persistent-apps = [
+            "/Applications/Safari.app"
+            "/Applications/WezTerm.app"
+            "/Applications/Ghostty.app"
+            "/Applications/Slack.app"
+            "/Applications/Microsoft Outlook.app"
+            "/Applications/Microsoft Teams.app"
+            "/System/Applications/System Settings.app"
+            "/System/Applications/Utilities/Activity Monitor.app"
+          ];
 
         };
       userConfig =
