@@ -11,32 +11,14 @@ set -gx SSH_AUTH_SOCK "~/.ssh/agent"
 ## lazygit
 set -gx XDG_CONFIG_HOME "$HOME/.config"
 
-# Homebrew
-eval "$(/opt/homebrew/bin/brew shellenv)"
-# Make sure that brew is prepended to the PATH (for ssh)
-fish_add_path /opt/homebrew/bin
-
-# Pyenv
-set -gx PYENV_ROOT $HOME/.pyenv
-set -gx PATH $PYENV_ROOT/bin $PATH
-
-# Pipx / Poetry
-fish_add_path $HOME/.local/bin
-
 # Pip
 set -gx PIP_REQUIRE_VIRTUALENV true
-
-# Go
-fish_add_path $HOME/go/bin
 
 # GPG TTY
 set -gx GPG_TTY $(tty)
 
 # DevPi
 # set PIP_INDEX_URL http://localhost:4040/root/pypi/+simple/
-
-## rustup
-fish_add_path $HOME/.cargo/bin
 
 ## fzf
 set -gx FZF_DEFAULT_OPTS --ansi
