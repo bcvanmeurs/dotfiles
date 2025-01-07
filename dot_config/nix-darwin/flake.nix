@@ -57,8 +57,11 @@
             brews = [ ];
             casks = [
               "firefox"
+              "ghostty"
+              "monitorcontrol"
+              "wezterm"
             ];
-            # onActivation.cleanup = "zap";
+            onActivation.cleanup = "zap";
           };
 
           nixpkgs.config.allowUnfree = true;

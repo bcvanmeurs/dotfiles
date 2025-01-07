@@ -258,6 +258,13 @@ run = 'move-node-to-workspace S'
 if.app-id = 'com.microsoft.teams2'
 run = 'move-node-to-workspace V'
 
+[[on-window-detected]]
+if.app-id = 'com.mitchellh.ghostty'
+run = [
+  'layout floating',
+  # 'move-node-to-workspace T',
+]
+
 [workspace-to-monitor-force-assignment]
 # 1 = 1                            # Monitor sequence number from left to right. 1-based indexing
 # 2 = 'main'                       # Main monitor
