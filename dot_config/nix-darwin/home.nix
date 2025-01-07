@@ -19,10 +19,12 @@ in
       age
       age-plugin-yubikey
       delta # can be part of git program
-      ghostty
+      # ghostty
       nerd-fonts.fira-code
+      nodejs # necessary for npm used by neovim mason
       git-lfs
       gnused
+      go
       gojq
       just
       kubectl
@@ -32,10 +34,12 @@ in
       rip2
       ripgrep
       ripgrep-all
+      rustc
+      cargo
       tree
       tlrc # tldr client in rust
       uv
-      wezterm
+      # wezterm
       wget
 
       dive
@@ -55,7 +59,7 @@ in
 
       ## applications
       alt-tab-macos
-      monitorcontrol
+      # monitorcontrol # old version
     ]
     ++ private;
 
@@ -105,10 +109,10 @@ in
       enable = true;
       enableFishIntegration = true;
     };
-    pyenv = {
-      enable = true;
-      enableFishIntegration = true;
-    };
+    # pyenv = {
+    #   enable = true;
+    #   enableFishIntegration = true;
+    # };
     starship = {
       enable = true;
       enableFishIntegration = true;
