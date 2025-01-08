@@ -2,58 +2,65 @@
 
 ## Quickstart
 
-Install brew
+Install nix with the determinate systems installer:
 
 ```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | \
+  sh -s -- install
 ```
 
 ```bash
-sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply bcvanmeurs
+sh -c "$(curl -fsLS get.chezmoi.io)" -- init apply bcvanmeurs
 ```
 
-After installation set remote to be through SSH
+This will download the dotfiles to `~/.local/share/chezmoi`,
+as we need the nix-darwin flakes to install the required software.
+
+Install all software and packages:
 
 ```bash
-git remote set-url origin git@github.com:bcvanmeurs/dotfiles.git
+nix run nix-darwin -- switch --flake ~/.local/share/chezmoi/dot_config/nix-darwin
 ```
 
-import GPG key
+### Post install steps
 
-```bash
-gpg --import ~/.gnupg/gpg-github-0x7DFB3B93C5B98C91-2022-11-23.asc
-gpg --edit-key 0x7DFB3B93C5B98C91
-trust
-quit
-```
+- Allow the 1Password cli functionality from the UI.
+- Apply chezmoi
 
-### Fish shell
+  ```bash
+  chezmoi status # check if everything works
+  chezmoi apply
+  ```
 
-Add the fish shell to /etc/shells with:
+- Change your default shell
 
-```bash
-echo $(which fish) | sudo tee -a /etc/shells
-```
+  ```bash
+  chsh -s $(which fish)
+  ```
 
-Change your default shell with:
+- Set remote to be through SSH
 
-```bash
-chsh -s $(which fish)
-```
+  ```fish
+  git remote set-url origin git@github.com:bcvanmeurs/dotfiles.git
+  ```
 
-### Tmux
+- Import GPG key
 
-In tmux run `prefix + I` to install [tpm](https://github.com/tmux-plugins/tpm) packages.
+  ```fish
+  gpg --import ~/.gnupg/gpg-github-0x7DFB3B93C5B98C91-2024-12-03.asc
+  gpg --edit-key 0x7DFB3B93C5B98C91
+  trust
+  quit
+  ```
 
-### Yabai
-
-- `yabai --start-service`
-- `skhd --start-service`
+- In tmux run `prefix + I` to install [tpm](https://github.com/tmux-plugins/tpm) packages.
 
 ## Choices made
 
 - Using Age and YubiKeys for encryption ([age-plugin-yubikey](https://github.com/str4d/age-plugin-yubikey))
 - SSH keys on YubiKeys with secret part in 1Password
+- Using Nix for packages
+- Using Brew for casks as these seem better maintained
 
 ## Todo
 
@@ -68,26 +75,14 @@ In tmux run `prefix + I` to install [tpm](https://github.com/tmux-plugins/tpm) p
     - [aliases](https://github.com/batistein/dotfiles/blob/master/dot_zsh/alias.zsh)
   - [twpayne/dotfiles](https://github.com/twpayne/dotfiles)
 
-## Brew
-
-Brew runs automated when the brewfile has changed. To manually run use:
-
-- `brew bundle install --no-upgrade`
-- `chezmoi apply ~/Brewfile && brew bundle install --file ~/Brewfile --no-upgrade`
-- `brew bundle cleanup --file ~/Brewfile`
-- `chezmoi apply ~/Brewfile && brew bundle cleanup --file ~/Brewfile`
-- `brew cu`
-- `brew cu -a -i` for interactive mode on auto updatable programs
-
-- [More brew tips and tricks](https://gist.github.com/jamesmurdza/6e5f86bae7d3b3db4201a52045a5e477)
-
 ## Encryption
 
 ### Encryption with age
 
-1. Follow this to create a key pair: https://www.chezmoi.io/user-guide/frequently-asked-questions/encryption/
+1. Follow this to create a key pair: <https://www.chezmoi.io/user-guide/frequently-asked-questions/encryption/>
 2. Encrypt a yaml file in some place (in my example it is in data).
 3. Use Go templating syntax to read and decrypt the file, for example:
+
    ```bash
    {{- $work := include "data/work.yaml.age" | decrypt | fromYaml -}}
    export PIP_EXTRA_INDEX_URL={{ $work.pip_extra_index_url }}
@@ -95,7 +90,7 @@ Brew runs automated when the brewfile has changed. To manually run use:
 
 ### Encryption with 1Password
 
-```
+```yaml
 {{ onepasswordRead "op://development/id_sk_nano/id_sk_nano.pub" }}
 ```
 
