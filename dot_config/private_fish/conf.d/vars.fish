@@ -14,6 +14,9 @@ set -gx XDG_CONFIG_HOME "$HOME/.config"
 # Pip
 set -gx PIP_REQUIRE_VIRTUALENV true
 
+# pipx
+set PATH $PATH /Users/bram.vanmeurs/.local/bin
+
 # GPG TTY
 set -gx GPG_TTY $(tty)
 

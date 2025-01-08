@@ -25,6 +25,11 @@ alias gco="git checkout"
 alias gcmsg="git commit -m"
 alias gl="git pull"
 
+## Chezmoi
+alias chs="chezmoi status --exclude=templates,encrypted"
+alias chd="chezmoi diff --exclude=templates,encrypted"
+alias cha="chezmoi apply --exclude=templates,encrypted"
+
 ## Repos
 # alias rep="cd ( fd -d 1 -t directory -c always . ~/repos/ | fzf --ansi )"
 function rep
