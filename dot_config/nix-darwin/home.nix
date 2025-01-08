@@ -30,6 +30,7 @@ in
       kubectl
       kubectx
       minikube
+      pipx
       pre-commit
       rip2
       ripgrep

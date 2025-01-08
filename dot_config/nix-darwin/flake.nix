@@ -56,7 +56,7 @@
             enable = true;
             brews = [ ];
             casks = [
-              "firefox"
+              "arc"
               "ghostty"
               "monitorcontrol"
               "wezterm"
@@ -110,16 +110,6 @@
             dock.show-recents = false;
             spaces.spans-displays = true;
           };
-          system.defaults.dock.persistent-apps = [
-            "/Applications/Safari.app"
-            "/Applications/WezTerm.app"
-            "/Applications/Ghostty.app"
-            "/Applications/Slack.app"
-            "/Applications/Microsoft Outlook.app"
-            "/Applications/Microsoft Teams.app"
-            "/System/Applications/System Settings.app"
-            "/System/Applications/Utilities/Activity Monitor.app"
-          ];
 
         };
       userConfig =
@@ -132,6 +122,18 @@
             shell = pkgs.fish;
           };
         };
+      workDock = {
+        system.defaults.dock.persistent-apps = [
+          "/Applications/Arc.app"
+          "/Applications/WezTerm.app"
+          "/Applications/Ghostty.app"
+          "/Applications/Slack.app"
+          "/Applications/Microsoft Outlook.app"
+          "/Applications/Microsoft Teams.app"
+          "/System/Applications/System Settings.app"
+          "/System/Applications/Utilities/Activity Monitor.app"
+        ];
+      };
 
     in
     {
@@ -165,6 +167,7 @@
       darwinConfigurations."A1519" = nix-darwin.lib.darwinSystem {
         modules = [
           configuration
+          workDock
           (userConfig { name = "bram.vanmeurs"; })
           home-manager.darwinModules.home-manager
           {
