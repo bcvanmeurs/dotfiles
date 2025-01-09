@@ -36,6 +36,20 @@ function rep
     cd (fd -d 1 -t directory -c always . ~/repos/ | fzf --ansi --height 40% --reverse --query "$argv")
 end
 
+function cloneRepo
+    set REPO (cat ~/adarga-ltd-repos.txt | fzf --layout reverse --border --height ~40% --tmux 80%)
+    set REPO_DIR "$HOME/repos/$REPO"
+
+    if test ! -d "$REPO_DIR"
+        git clone "org-25746375@github.com:Adarga-Ltd/$REPO.git" "$REPO_DIR"
+    end
+
+    cd "$REPO_DIR"
+end
+
+alias clone_repo=cloneRepo
+alias update_repos="gh repo list adarga-ltd --json name -L 500 | jq -r 'sort_by(.name | ascii_downcase).[].name' > ~/adarga-ltd-repos.txt"
+
 alias rev="nvim ( fd -d 1 -t directory -c always . ~/repos/ | fzf --ansi )"
 alias lg="lazygit"
 
