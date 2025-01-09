@@ -59,6 +59,7 @@
               "arc"
               "ghostty"
               "monitorcontrol"
+              "obsidian"
               "wezterm"
             ];
             onActivation.cleanup = "zap";

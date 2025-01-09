@@ -90,7 +90,7 @@ nix run nix-darwin -- switch --flake ~/.local/share/chezmoi/dot_config/nix-darwi
 
 ### Encryption with 1Password
 
-```yaml
+```tmpl
 {{ onepasswordRead "op://development/id_sk_nano/id_sk_nano.pub" }}
 ```
 

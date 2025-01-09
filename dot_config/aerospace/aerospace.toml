@@ -55,12 +55,12 @@ on-focus-changed = [
 #                 Monitor pattern is the same as for 'workspace-to-monitor-force-assignment'.
 #                 See: https://nikitabobko.github.io/AeroSpace/guide#assign-workspaces-to-monitors
 [gaps]
-inner.horizontal = 6
-inner.vertical = 6
-outer.left = 6
-outer.bottom = 6
-outer.top = 6
-outer.right = 6
+inner.horizontal = 16
+inner.vertical = 16
+outer.left = 10
+outer.bottom = 10
+outer.top = 10
+outer.right = 10
 
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -177,7 +177,7 @@ alt-shift-a = ['move-node-to-workspace A', 'workspace A']
 alt-shift-b = ['move-node-to-workspace B', 'workspace B']
 alt-shift-c = ['move-node-to-workspace C', 'workspace C']
 alt-shift-d = ['move-node-to-workspace D', 'workspace D']
-alt-shift-f = 'fullscreen'
+alt-shift-f = 'layout floating tiling'
 alt-shift-g = ['move-node-to-workspace G', 'workspace G']
 # alt-shift-m = ['move-node-to-workspace M', 'workspace M'] # qwerty
 # alt-shift-n = ['move-node-to-workspace N', 'workspace N'] # qwerty
@@ -236,6 +236,10 @@ run = 'layout floating'
 
 [[on-window-detected]]
 if.app-id = 'com.apple.ActivityMonitor'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.1password.1password'
 run = 'layout floating'
 
 [[on-window-detected]]

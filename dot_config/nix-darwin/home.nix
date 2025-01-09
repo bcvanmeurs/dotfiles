@@ -26,6 +26,7 @@ in
       gnused
       go
       gojq
+      gh
       just
       kubectl
       kubectx
