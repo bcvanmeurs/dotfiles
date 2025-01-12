@@ -123,6 +123,19 @@
             shell = pkgs.fish;
           };
         };
+      dock = {
+        system.defaults.dock.persistent-apps = [
+          "/System/Cryptexes/App/System/Applications/Safari.app"
+          "/Applications/Ghostty.app"
+          "/System/Applications/Mail.app"
+          "/Applications/Proton Mail.app"
+          "/Applications/Obsidian.app"
+          "/System/Applications/Calendar.app"
+          # "/System/Applications/Reminders.app"
+          "/System/Applications/System Settings.app"
+          "/System/Applications/Utilities/Activity Monitor.app"
+        ];
+      };
       workDock = {
         system.defaults.dock.persistent-apps = [
           "/Applications/Arc.app"
@@ -143,6 +156,7 @@
       darwinConfigurations."Brams-MacBook-Air" = nix-darwin.lib.darwinSystem {
         modules = [
           configuration
+          dock
           (userConfig { name = "bram"; })
           home-manager.darwinModules.home-manager
           {

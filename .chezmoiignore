@@ -2,6 +2,8 @@ README.md
 ignored/
 data/
 justfile
+.config/nix-darwin/
+node_modules
 
 {{- if ne .hostname "SHPLC-T4VS" }}
 
