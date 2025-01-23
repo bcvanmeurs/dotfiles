@@ -2,6 +2,7 @@
 let
   # Importing package groups
   private = import ./private.nix { inherit pkgs; };
+  work = import ./work.nix { inherit pkgs; };
 in
 {
   # Home Manager needs a bit of information about you and the
@@ -63,7 +64,8 @@ in
       alt-tab-macos
       # monitorcontrol # old version
     ]
-    ++ private;
+    ++ private
+    ++ work;
 
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage
