@@ -48,7 +48,7 @@ function colemak
     # Construct the new line and update the file
     set replace_line "set -gx COLEMAK $COLEMAK"
     set -gx COLEMAK $COLEMAK
-    sed -i "" "s/^set -gx COLEMAK .*/$replace_line/" "$vars_file"
+    sed -i "s/^set -gx COLEMAK .*/$replace_line/" "$vars_file"
     echo "Updated COLEMAK to $COLEMAK"
     return 0
 end

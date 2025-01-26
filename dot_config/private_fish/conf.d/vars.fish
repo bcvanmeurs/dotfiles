@@ -15,7 +15,10 @@ set -gx XDG_CONFIG_HOME "$HOME/.config"
 set -gx PIP_REQUIRE_VIRTUALENV true
 
 # pipx
-set PATH $PATH /Users/bram.vanmeurs/.local/bin
+set PATH $PATH $HOME/.local/bin
+
+# docker
+set PATH $PATH $HOME/.docker/bin
 
 # GPG TTY
 set -gx GPG_TTY $(tty)
