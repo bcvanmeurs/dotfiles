@@ -55,13 +55,6 @@
           homebrew = {
             enable = true;
             brews = [ ];
-            casks = [
-              "arc"
-              "ghostty"
-              "monitorcontrol"
-              "obsidian"
-              "wezterm"
-            ];
             onActivation.cleanup = "zap";
           };
 
@@ -123,10 +116,32 @@
             shell = pkgs.fish;
           };
         };
+      apps = {
+        homebrew.casks = [
+          "arc"
+          "discord"
+          "ghostty"
+          "monitorcontrol"
+          "obsidian"
+          "reader"
+          "wezterm"
+        ];
+      };
+      workApps = {
+        homebrew.casks = [
+          "arc"
+          "ghostty"
+          "monitorcontrol"
+          "obsidian"
+          "wezterm"
+        ];
+      };
       dock = {
+        system.defaults.NSGlobalDomain._HIHideMenuBar = false;
         system.defaults.dock.persistent-apps = [
           "/System/Cryptexes/App/System/Applications/Safari.app"
           "/Applications/Ghostty.app"
+          "/System/Applications/Messages.app"
           "/System/Applications/Mail.app"
           "/Applications/Proton Mail.app"
           "/Applications/Obsidian.app"
@@ -156,6 +171,7 @@
       darwinConfigurations."Brams-MacBook-Air" = nix-darwin.lib.darwinSystem {
         modules = [
           configuration
+          apps
           dock
           (userConfig { name = "bram"; })
           home-manager.darwinModules.home-manager
@@ -182,6 +198,7 @@
       darwinConfigurations."A1519" = nix-darwin.lib.darwinSystem {
         modules = [
           configuration
+          workApps
           workDock
           (userConfig { name = "bram.vanmeurs"; })
           home-manager.darwinModules.home-manager
