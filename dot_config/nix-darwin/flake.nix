@@ -54,14 +54,13 @@
           # };
           homebrew = {
             enable = true;
-            brews = [ ];
+            onActivation.autoUpdate = true; # update homebrew
+            onActivation.upgrade = true; # upgrade all brews
             onActivation.cleanup = "zap";
           };
 
           nixpkgs.config.allowUnfree = true;
 
-          # Auto upgrade nix package and the daemon service.
-          services.nix-daemon.enable = true;
           # nix.package = pkgs.nix;
 
           # Necessary for using flakes on this system.
@@ -117,6 +116,9 @@
           };
         };
       apps = {
+        homebrew.brews = [
+          "node"
+        ];
         homebrew.casks = [
           "arc"
           "discord"
@@ -141,6 +143,7 @@
         system.defaults.dock.persistent-apps = [
           "/System/Cryptexes/App/System/Applications/Safari.app"
           "/Applications/Ghostty.app"
+          "/Applications/Signal.app"
           "/System/Applications/Messages.app"
           "/System/Applications/Mail.app"
           "/Applications/Proton Mail.app"

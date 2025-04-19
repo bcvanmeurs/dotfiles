@@ -22,7 +22,7 @@ in
       delta # can be part of git program
       # ghostty
       nerd-fonts.fira-code
-      nodejs # necessary for npm used by neovim mason
+      # nodejs # necessary for npm used by neovim mason
       git-lfs
       gnused
       go
@@ -31,6 +31,7 @@ in
       just
       kubectl
       kubectx
+      macmon
       minikube
       pipx
       pre-commit
