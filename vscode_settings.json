@@ -75,5 +75,14 @@
   },
   "workbench.iconTheme": "vscode-icons",
   "workbench.preferredDarkColorTheme": "One Dark Pro Monokai Darker",
-  "workbench.preferredLightColorTheme": "Hop Light"
+  "workbench.preferredLightColorTheme": "Hop Light",
+  "roo-cline.allowedCommands": [
+    "npm test",
+    "npm install",
+    "tsc",
+    "git log",
+    "git diff",
+    "git show"
+  ],
+  "terminal.integrated.defaultProfile.osx": "fish"
 }

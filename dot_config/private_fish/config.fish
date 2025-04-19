@@ -5,3 +5,9 @@ if status is-interactive
     # mcfly init fish | source
     #set -gx PATH $PATH $HOME/.krew/bin
 end
+
+# Added by LM Studio CLI (lms)
+set -gx PATH $PATH /Users/bram/.lmstudio/bin
+
+# vscode
+string match -q "$TERM_PROGRAM" vscode; and . (code --locate-shell-integration-path fish)

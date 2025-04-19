@@ -31,3 +31,6 @@ set -gx FZF_DEFAULT_OPTS --ansi
 
 ## OP
 set -gx OP_ACCOUNT LV4XK7GW6VGCBJHMIYAG26GFT4
+
+## vscode
+set PATH $PATH "/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
