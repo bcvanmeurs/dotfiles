@@ -44,6 +44,7 @@
             pkgs.tmux
             pkgs.pam-reattach
           ];
+          # services.postgresql.enable = true;
           # services = {
           #   aerospace.enable = true; # need a way to parse config
           # };
@@ -60,6 +61,7 @@
               "ghostty"
               "monitorcontrol"
               "obsidian"
+              "raycast"
               "wezterm"
             ];
             onActivation.cleanup = "zap";

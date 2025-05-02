@@ -16,7 +16,7 @@ repos:
     rev: "v4.0.0-alpha.8"
     hooks:
       - id: prettier
-        exclude: dot_config/nix-darwin/flake.lock
+        # exclude: dot_config/nix-darwin/flake.lock
   - repo: local
     hooks:
       - id: nix-fmt

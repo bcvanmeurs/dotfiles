@@ -19,6 +19,7 @@ in
       aerospace
       age
       age-plugin-yubikey
+      beam27Packages.elixir
       delta # can be part of git program
       # ghostty
       nerd-fonts.fira-code
@@ -33,12 +34,14 @@ in
       kubectx
       minikube
       pipx
+      postgresql
       pre-commit
       rip2
       ripgrep
       ripgrep-all
-      rustc
-      cargo
+      # rustc
+      rustup
+      # cargo
       tree
       tlrc # tldr client in rust
       uv
